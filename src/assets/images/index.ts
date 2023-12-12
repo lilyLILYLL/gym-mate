@@ -9,7 +9,7 @@ export * from "./classes";
 export * from "./features";
 export * from "./gallery";
 export * from "./GalleryPage";
-export * from "./hero";
+export * from "./home";
 export * from "./login";
 export * from "./logo";
 export * from "./pricing";

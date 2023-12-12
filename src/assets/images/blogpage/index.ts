@@ -1,10 +1,10 @@
-import BlogPage1 from "./blogpage1.jpg";
-import BlogPage2 from "./blogpage2.jpg";
-import BlogPage3 from "./blogpage3.jpg";
-import BlogPage4 from "./blogpage4.jpg";
-import BlogPage5 from "./blogpage5.jpg";
-import BlogPage6 from "./blogpage6.jpg";
-import BlogPage7 from "./blogpage7.jpg";
+import BlogPage1 from "./1.jpg";
+import BlogPage2 from "./2.jpg";
+import BlogPage3 from "./3.jpg";
+import BlogPage4 from "./4.jpg";
+import BlogPage5 from "./5.jpg";
+import BlogPage6 from "./6.jpg";
+import BlogPage7 from "./7.jpg";
 
 import Recent1 from "./recent1.jpg";
 import Recent2 from "./recent2.jpg";
