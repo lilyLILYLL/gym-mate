@@ -3,39 +3,24 @@ import { BannerInfo } from "@molecules";
 
 type Props = {
     bgImg: string;
-    title: string;
-    header: string;
-    description: string;
-    primary?: boolean;
-    children?: JSX.Element;
+    bannerInfo: JSX.Element;
+    bannerImg?: JSX.Element;
     containerClassName?: string;
 };
 
-export const BannerTemplate = ({
-    bgImg,
-    children,
-    containerClassName,
-    ...props
-}: Props) => {
+export const BannerTemplate = (props: Props) => {
     return (
         <div
-            className={`min-h-screen pt-36 bg-home-bg  bg-no-repeat relative ${containerClassName}`}
+            className={`min-h-screen pt-36 bg-home-bg  bg-no-repeat relative ${props.containerClassName}`}
             style={{
-                backgroundImage: `url('${bgImg}')`,
+                backgroundImage: `url('${props.bgImg}')`,
                 backgroundPosition: "40% 10%",
             }}
         >
-            {props.primary ? (
-                <BannerInfo
-                    containerClassName="left-[50%] top-[35%] absolute "
-                    {...props}
-                />
-            ) : (
-                <div className="grid md:grid-cols-2 grid-cols-1">
-                    <BannerInfo {...props} />
-                    {children}
-                </div>
-            )}
+            <div className="grid grid-cols-1 justify-center items-center text-center lg:grid-cols-2 lg:gap-20 lg:text-start lg:w-5/6 w-11/12 mx-auto ">
+                {props.bannerInfo}
+                {props.bannerImg}
+            </div>
         </div>
     );
 };

@@ -11,7 +11,7 @@ type Props = {};
 
 export const NavBar = (props: Props) => {
     return (
-        <div className=" bg-black py-5 px-6 flex flex-row  justify-around items-center h-fit fixed top-0">
+        <div className=" bg-black py-5 px-6 flex flex-row  justify-around items-center h-fit fixed top-0 z-50">
             {/* LOGO  */}
             <Link
                 href="/"

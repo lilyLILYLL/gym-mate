@@ -10,7 +10,7 @@ type Props = {
 export const TextWithBg = ({ children, primary }: Props) => {
     return (
         <div
-            className={` overflow-hidden h-fit flex flex-col relative justify-center items-center w-fit px-10 py-2`}
+            className={` overflow-hidden h-fit flex flex-col relative justify-center items-center w-fit px-10 py-2 self-center lg:self-start`}
         >
             <Image
                 src={primary ? TitleBg : TitleBgRed}
