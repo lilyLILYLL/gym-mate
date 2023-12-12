@@ -17,3 +17,6 @@ export * from "./pricing";
 export * from "./testimonials";
 export * from "./trainers";
 export * from "./who-we-are";
+import TitleBgRed from "./titlebg.svg";
+import TitleBg from "./titlebg_white.svg";
+export { TitleBg, TitleBgRed };
