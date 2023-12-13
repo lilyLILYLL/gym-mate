@@ -26,7 +26,7 @@ export const Button = (props: Props) => {
             buttonStyle = "";
             break;
         case "danger":
-            buttonStyle = "bg-red";
+            buttonStyle = "bg-red-600 py-3 px-4 text-white font-bold";
             break;
         default:
             break;

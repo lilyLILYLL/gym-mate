@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 type Props = {
-    children: JSX.Element | string;
+    children: React.HTMLAttributes<HTMLDivElement>;
 } & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 export const Text = ({ children, ...props }: Props) => {

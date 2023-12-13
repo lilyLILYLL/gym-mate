@@ -7,6 +7,7 @@ import {
     GirlRunningImage,
     ChooseUsImage,
     GallerySectionImage,
+    PricingSectionBgImage,
 } from "@atoms";
 import {
     IconArrowRight,
@@ -16,8 +17,13 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { BannerTemplate } from "@templates";
-import { BannerInfo, TrainerCard } from "@molecules";
-import { WHO_WE_ARE_BANNER_SAMPLES, WHY_CHOOSE_US_SAMPLES, trainers } from "@shared";
+import { BannerInfo, CourseCard, TrainerCard } from "@molecules";
+import {
+    COURSES,
+    WHO_WE_ARE_BANNER_SAMPLES,
+    WHY_CHOOSE_US_SAMPLES,
+    trainers,
+} from "@shared";
 type Props = {};
 
 const Home = (props: Props) => {
@@ -128,8 +134,7 @@ const Home = (props: Props) => {
                     <BannerInfo
                         title="GYMAT GALLERY"
                         header="Our Workplace Gallery"
-                        description="Our Workplace Gallery features modern office, team collaboration, and fun culture.
-Attracts talents and showcases company's work atmosphere"
+                        description="Our Workplace Gallery features modern office, team collaboration, and fun culture. Attracts talents and showcases company's work atmosphere"
                         type="secondary-black"
                         containerClassName="justify-center items-center "
                     />
@@ -137,7 +142,30 @@ Attracts talents and showcases company's work atmosphere"
                 bannerImg={<GallerySectionImage />}
             />
 
-            {/* GYMAT GALLERY SECTION */}
+            {/* PRICING SECTION */}
+            <BannerTemplate
+                col
+                bgImg={<PricingSectionBgImage />}
+                bannerInfo={
+                    <BannerInfo
+                        title="PRICING CHART"
+                        header="Exclusive Pricing Plan"
+                        description="Gymat an unknown printer took a galley of type and scrambled make a type specimen book."
+                        type="secondary-black"
+                        containerClassName="justify-center items-center "
+                    />
+                }
+                bannerImg={
+                    <div className="flex lg:flex-row flex-col gap-12">
+                        {COURSES.map((item, index) => (
+                            <CourseCard
+                                key={index}
+                                course={item}
+                            />
+                        ))}
+                    </div>
+                }
+            />
 
             {/* CONTACT INFO
             <div className="w-fit flex flex-col justify-center items-center gap-3 absolute right-14 top-[40%]">

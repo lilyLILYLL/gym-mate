@@ -10,3 +10,10 @@ export type TrainerInfoModel = {
     full_name: string;
     role: string;
 };
+
+export type CourseModel = {
+    img: StaticImageData;
+    level: "Beginners" | "Intermidiate" | "Advanced";
+    price: number;
+    classes: string[];
+};

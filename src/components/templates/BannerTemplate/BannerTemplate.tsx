@@ -1,7 +1,7 @@
 import React from "react";
 
 type Props = {
-    bgImg?: string;
+    bgImg?: string | JSX.Element;
     bannerInfo: JSX.Element;
     bannerImg?: JSX.Element;
     containerClassName?: string;
@@ -11,12 +11,22 @@ type Props = {
 export const BannerTemplate = (props: Props) => {
     return (
         <div
-            className={`min-h-screen py-28 bg-home-bg   relative ${props.containerClassName}`}
+            className={`min-h-screen pt-36  bg-home-bg   relative ${props.containerClassName}`}
             style={{
-                backgroundImage: `url('${props.bgImg}')`,
+                backgroundImage: `url('${
+                    typeof props.bgImg === "string" ? props.bgImg : ""
+                }')`,
                 backgroundPosition: "40% 10%",
             }}
         >
+            {/* CUSTOM Background IMG */}
+            {props.bgImg && typeof props.bgImg !== "string" && (
+                <div className="absolute top-0 left-0 right-0  h-full z-[-1] ">
+                    {props.bgImg}
+                </div>
+            )}
+
+            {/* CONTENT */}
             <div
                 className={`w-11/12 lg:w-5/6 mx-auto  flex flex-col gap-10  justify-center items-center text-center  ${
                     props.col

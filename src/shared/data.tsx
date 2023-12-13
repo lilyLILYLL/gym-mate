@@ -1,4 +1,4 @@
-import { SampleModel, TrainerInfoModel } from "./types";
+import { SampleModel, TrainerInfoModel, CourseModel } from "./types";
 import {
     Workout,
     Equiments,
@@ -10,6 +10,9 @@ import {
     Trainer1,
     Trainer2,
     Trainer3,
+    PricingImg1,
+    PricingImg2,
+    PricingImg3,
 } from "@assets";
 
 export const WHO_WE_ARE_BANNER_SAMPLES: SampleModel[] = [
@@ -50,4 +53,43 @@ export const trainers: TrainerInfoModel[] = [
     { avatar: Trainer1, full_name: "John Lewis", role: "Crossfit Trainer" },
     { avatar: Trainer2, full_name: "Joey Tribbiani", role: "Yoga Trainer" },
     { avatar: Trainer3, full_name: "Rachel Green", role: "Personal Trainer" },
+];
+
+export const COURSES: CourseModel[] = [
+    {
+        level: "Beginners",
+        price: 39,
+        classes: [
+            "Free Hand",
+            "Gym Fitness",
+            "Weight Loss",
+            "Personal Trainer",
+            "Cycling",
+        ],
+        img: PricingImg1,
+    },
+    {
+        level: "Intermidiate",
+        price: 65,
+        classes: [
+            "Free Hand",
+            "Gym Fitness",
+            "Weight Loss",
+            "Personal Trainer",
+            "Cycling",
+        ],
+        img: PricingImg2,
+    },
+    {
+        level: "Advanced",
+        price: 100,
+        classes: [
+            "Free Hand",
+            "Gym Fitness",
+            "Weight Loss",
+            "Personal Trainer",
+            "Cycling",
+        ],
+        img: PricingImg3,
+    },
 ];
