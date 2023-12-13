@@ -6,16 +6,17 @@ import { Text } from "@atoms";
 type Props = {
     item: SampleModel;
     type: "primary" | "secondary-black" | "secondary-white";
+    containerClassName?: string;
 };
 
-export const SampleCard = ({ item, type }: Props) => {
+export const SampleCard = ({ item, type, containerClassName }: Props) => {
     return (
         <div
             className={`flex gap-3  ${
                 type === "secondary-black"
-                    ? " flex-col  border-slate-300 border-r-[0.5px]  justify-center items-center py-6 px-4"
+                    ? " flex-col  border-slate-300 sm:border-r-[0.5px]  justify-center items-center py-6 px-2"
                     : "flex-row items-center "
-            }`}
+            }  ${containerClassName}`}
         >
             <Image
                 src={item.img}

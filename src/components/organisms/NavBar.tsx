@@ -4,14 +4,19 @@ import Image from "next/image";
 import { LinkText } from "@atoms";
 import { SCREENS } from "@shared";
 import { Button } from "@atoms";
-import { IconUserCircle, IconAlignBoxLeftMiddle, IconPlus } from "@tabler/icons-react";
+import {
+    IconUserCircle,
+    IconAlignBoxLeftMiddle,
+    IconPlus,
+    IconMenu2,
+} from "@tabler/icons-react";
 import Link from "next/link";
 import "src/app/globals.css";
 type Props = {};
 
 export const NavBar = (props: Props) => {
     return (
-        <div className=" bg-black py-5 px-6 flex flex-row  justify-around items-center h-fit fixed top-0 z-50">
+        <div className=" bg-black py-5 px-6 flex flex-row  justify-between items-center h-fit fixed top-0 z-50">
             {/* LOGO  */}
             <Link
                 href="/"
@@ -24,7 +29,7 @@ export const NavBar = (props: Props) => {
             </Link>
 
             {/* LINKS */}
-            <div className="flex flex-row w-1/2 mx-auto ">
+            <div className="xl:flex flex-row w-1/2 mx-auto hidden xl:visible">
                 {SCREENS.map((item, index) => (
                     <LinkText
                         to={item}
@@ -34,11 +39,16 @@ export const NavBar = (props: Props) => {
                 ))}
             </div>
 
-            <div className="flex flex-box gap-4 items-center w-fit">
+            <div className="w-fit flex flex-box  justify-end items-center  gap-x-4 ">
+                {/* Menu icon */}
+                <IconMenu2
+                    className="w-[2rem]  visible xl:hidden cursor-pointer"
+                    color="white"
+                />
                 {/* USER ICON */}
                 <Link
                     href={"/"}
-                    className="w-[2.5rem]"
+                    className="w-[2rem]"
                 >
                     <IconUserCircle
                         color="white"
@@ -49,7 +59,7 @@ export const NavBar = (props: Props) => {
                 {/* SIDE BAR TOGGLE ICON */}
                 <Link
                     href={"/"}
-                    className="w-[2.5rem]"
+                    className="w-[2rem]"
                 >
                     <IconAlignBoxLeftMiddle
                         color="white"
@@ -58,10 +68,13 @@ export const NavBar = (props: Props) => {
                 </Link>
 
                 {/* JOIN CLASS BUTTON */}
-                <Link href={"/contact"}>
+                <Link
+                    href={"/contact"}
+                    className="w-fit h-fit"
+                >
                     <Button
                         prefix={
-                            <div className="bg-red-700 w-10 p-[0.5rem] rounded-sm m-[0.1rem] icon-spin">
+                            <div className="bg-red-700 w-8 p-[0.5rem] rounded-sm m-[0.1rem] icon-spin pr-2 ">
                                 <IconPlus />
                             </div>
                         }

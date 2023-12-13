@@ -10,7 +10,7 @@ type Props = {
     title: string;
     header: string;
     description: string;
-    children?: JSX.Element;
+    button?: JSX.Element;
     containerClassName?: string;
     samples?: SampleModel[];
 };
@@ -24,55 +24,44 @@ export const BannerInfo = (props: Props) => {
             : "text-white text-[35px]";
 
     return (
-        <div className={` lg:w-full w-3/4 mx-auto ${props.containerClassName}`}>
-            <div className="flex flex-col gap-6">
-                {/* TITLE */}
-                <TextWithBg primary={props.type === "primary"}>{props.title}</TextWithBg>
-                {/* HEADER */}
-                <Text className={` font-bold ${headerStyle}`}>{props.header}</Text>
-                {/* DESCRIPTION */}
-                <Text
-                    className={`${
-                        props.type === "primary"
-                            ? "text-white text-[36px]"
-                            : "text-[#555] text-[1rem] "
+        <div
+            className={`h-fit lg:w-full w-3/4 mx-auto flex flex-col gap-6 justify-center items-center lg:items-start relative ${props.containerClassName}`}
+        >
+            {/* TITLE */}
+            <TextWithBg primary={props.type === "primary"}>{props.title}</TextWithBg>
+            {/* HEADER */}
+            <Text className={` font-bold ${headerStyle}`}>{props.header}</Text>
+            {/* DESCRIPTION */}
+            <Text
+                className={`${
+                    props.type === "primary"
+                        ? "text-white text-[36px]"
+                        : "text-[#555] text-[1rem] "
+                }`}
+            >
+                {props.description}
+            </Text>
+
+            {/* SAMPLES */}
+            {props.samples && (
+                <div
+                    className={`pb-6 ${
+                        props.type === "secondary-black"
+                            ? "flex flex-col w-1/2 sm:flex-row sm:w-full "
+                            : " flex flex-col gap-4  w-5/6 md:w-2/3 lg:w-full sm:grid  sm:grid-cols-2 grid-rows-2 sm:gap-y-8 sm:gap-x-10 text-left"
                     }`}
                 >
-                    {props.description}
-                </Text>
-
-                {/* SAMPLES */}
-                {props.samples && (
-                    <div
-                        className={`pb-6 ${
-                            props.type === "secondary-black"
-                                ? "flex flex-row "
-                                : "grid grid-cols-2 grid-rows-2 gap-y-8 gap-x-10"
-                        }`}
-                    >
-                        {props.samples.map((item, index) => (
-                            <SampleCard
-                                key={index}
-                                item={item}
-                                type={props.type}
-                            />
-                        ))}
-                    </div>
-                )}
-                {/* BUTTON */}
-                <Button
-                    animation
-                    title="OUR CLASSES"
-                    type="secondary"
-                    postfix={
-                        <IconArrowRight
-                            className="w-8"
-                            color="red"
+                    {props.samples.map((item, index) => (
+                        <SampleCard
+                            key={index}
+                            item={item}
+                            type={props.type}
                         />
-                    }
-                    containerClassName="lg:self-start self-center "
-                />
-            </div>
+                    ))}
+                </div>
+            )}
+            {/* BUTTON */}
+            {props.button}
         </div>
     );
 };

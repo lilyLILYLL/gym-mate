@@ -33,20 +33,16 @@ export const Button = (props: Props) => {
     }
     return (
         <div
-            className={` relative flex flex-row justify-center items-center  w-fit ${props.containerClassName}  cursor-pointer `}
-            onClick={props.onClick}
+            className={` 
+            relative flex flex-row justify-center items-center gap-2 pr-2 w-fit cursor-pointer z-30 ${props.containerClassName}    ${buttonStyle} ${props.textClassName} `}
         >
-            <div
-                className={` z-30 flex flex-row w-fit items-center gap-2 border  ${buttonStyle} ${props.textClassName} `}
-            >
-                {props.prefix}
-                {props.title}
-                {props.postfix}
-            </div>
-
-            {props.animation && (
-                <div className="z-20 absolute bg-transparent w-full h-full bottom-3 border-[#555] border left-3 "></div>
-            )}
+            {props.prefix}
+            {props.title}
+            {props.postfix}
         </div>
+
+        // {props.animation && (
+        //     <div className="z-20 absolute bg-transparent w-full h-full bottom-3 border-[#555] border left-3 "></div>
+        // )}
     );
 };

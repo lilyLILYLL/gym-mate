@@ -15,13 +15,14 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { BannerTemplate } from "@templates";
-import { BannerInfo } from "@molecules";
-import { WHO_WE_ARE_BANNER_SAMPLES, WHY_CHOOSE_US_SAMPLES } from "@shared";
+import { BannerInfo, TrainerCard } from "@molecules";
+import { WHO_WE_ARE_BANNER_SAMPLES, WHY_CHOOSE_US_SAMPLES, trainers } from "@shared";
 type Props = {};
 
 const Home = (props: Props) => {
     return (
         <div>
+            {/* HOME HEADER */}
             <BannerTemplate
                 bgImg="https://i.ibb.co/5s6xdrt/hero-img.jpg"
                 bannerInfo={
@@ -34,7 +35,10 @@ const Home = (props: Props) => {
                 }
             />
 
+            {/* WHO WE ARE SECTION */}
             <BannerTemplate
+                bgImg="https://i.ibb.co/GWzzyvv/background.jpg"
+                bannerImg={<GirlRunningImage />}
                 bannerInfo={
                     <BannerInfo
                         title="WHO WE ARE"
@@ -43,25 +47,77 @@ const Home = (props: Props) => {
                 help you reach your fitness goals."
                         samples={WHO_WE_ARE_BANNER_SAMPLES}
                         type="secondary-black"
+                        button={
+                            <Button
+                                animation
+                                title="OUR CLASSES"
+                                type="secondary"
+                                postfix={
+                                    <IconArrowRight
+                                        className="w-8"
+                                        color="red"
+                                    />
+                                }
+                            />
+                        }
                     />
                 }
-                bgImg="https://i.ibb.co/GWzzyvv/background.jpg"
-                bannerImg={<GirlRunningImage />}
             />
 
+            {/* WHY CHOOSE US SECTION */}
             <BannerTemplate
+                bgImg="https://i.ibb.co/ZNn1YJj/choose-bg.jpg"
+                bannerImg={<ChooseUsImage />}
                 bannerInfo={
                     <BannerInfo
                         title="WHY CHOOSE US"
                         header=" We Can Give A Shape Of Your Body Here!"
-                        description="At Gymate, we are dedicated to helping you achieve the body of your dreams. Our expert trainers and nutritionists will work with you to create a personalized fitness and nutrition plan that helps you reach your specific goals."
+                        description="At Gymate, we are dedicated to helping you achieve the body of 
+                        your dreams. Our expert trainers and nutritionists will work with you to create 
+                        a personalized fitness and nutrition plan that helps you reach your specific goals."
                         samples={WHY_CHOOSE_US_SAMPLES}
                         containerClassName="order-last"
                         type="secondary-white"
+                        button={
+                            <Button
+                                animation
+                                title="TAKE A TOUR"
+                                type="secondary"
+                                postfix={
+                                    <IconArrowRight
+                                        className="w-8"
+                                        color="red"
+                                    />
+                                }
+                            />
+                        }
                     />
                 }
-                bgImg="https://i.ibb.co/ZNn1YJj/choose-bg.jpg"
-                bannerImg={<ChooseUsImage />}
+            />
+
+            {/* GYM TRAINERS SECTION */}
+            <BannerTemplate
+                col
+                bgImg="https://i.ibb.co/bbsvnMH/dot-bg.png"
+                bannerInfo={
+                    <BannerInfo
+                        title="GYM TRAINERS"
+                        header="Team Of Expert Coaches"
+                        description="Expert team of coaches helps you succeed in any goal, personalized guidance and motivation provided!"
+                        type="secondary-black"
+                        containerClassName="justify-center items-center "
+                    />
+                }
+                bannerImg={
+                    <div className="flex flex-row flex-wrap justify-center items-center gap-14">
+                        {trainers.map((item, index) => (
+                            <TrainerCard
+                                key={index}
+                                trainer={item}
+                            />
+                        ))}
+                    </div>
+                }
             />
 
             {/* CONTACT INFO
