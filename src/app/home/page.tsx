@@ -6,6 +6,7 @@ import {
     AnimationButton,
     GirlRunningImage,
     ChooseUsImage,
+    GallerySectionImage,
 } from "@atoms";
 import {
     IconArrowRight,
@@ -123,27 +124,20 @@ const Home = (props: Props) => {
             {/* GYMAT GALLERY SECTION */}
             <BannerTemplate
                 col
-                bgImg="https://i.ibb.co/bbsvnMH/dot-bg.png"
                 bannerInfo={
                     <BannerInfo
-                        title="GYM TRAINERS"
-                        header="Team Of Expert Coaches"
-                        description="Expert team of coaches helps you succeed in any goal, personalized guidance and motivation provided!"
+                        title="GYMAT GALLERY"
+                        header="Our Workplace Gallery"
+                        description="Our Workplace Gallery features modern office, team collaboration, and fun culture.
+Attracts talents and showcases company's work atmosphere"
                         type="secondary-black"
                         containerClassName="justify-center items-center "
                     />
                 }
-                bannerImg={
-                    <div className="flex flex-row flex-wrap justify-center items-center gap-14">
-                        {trainers.map((item, index) => (
-                            <TrainerCard
-                                key={index}
-                                trainer={item}
-                            />
-                        ))}
-                    </div>
-                }
+                bannerImg={<GallerySectionImage />}
             />
+
+            {/* GYMAT GALLERY SECTION */}
 
             {/* CONTACT INFO
             <div className="w-fit flex flex-col justify-center items-center gap-3 absolute right-14 top-[40%]">
