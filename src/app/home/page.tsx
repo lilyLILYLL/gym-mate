@@ -120,6 +120,31 @@ const Home = (props: Props) => {
                 }
             />
 
+            {/* GYMAT GALLERY SECTION */}
+            <BannerTemplate
+                col
+                bgImg="https://i.ibb.co/bbsvnMH/dot-bg.png"
+                bannerInfo={
+                    <BannerInfo
+                        title="GYM TRAINERS"
+                        header="Team Of Expert Coaches"
+                        description="Expert team of coaches helps you succeed in any goal, personalized guidance and motivation provided!"
+                        type="secondary-black"
+                        containerClassName="justify-center items-center "
+                    />
+                }
+                bannerImg={
+                    <div className="flex flex-row flex-wrap justify-center items-center gap-14">
+                        {trainers.map((item, index) => (
+                            <TrainerCard
+                                key={index}
+                                trainer={item}
+                            />
+                        ))}
+                    </div>
+                }
+            />
+
             {/* CONTACT INFO
             <div className="w-fit flex flex-col justify-center items-center gap-3 absolute right-14 top-[40%]">
                 <Text className="text-white font-bold tracking-wider text-lg text-center mb-6 rotate-90 ">
