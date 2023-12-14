@@ -9,7 +9,7 @@ type Props = {
     type: "primary" | "secondary-black" | "secondary-white";
     title: string;
     header: string;
-    description: string;
+    description?: string;
     button?: JSX.Element;
     containerClassName?: string;
     samples?: SampleModel[];
@@ -49,7 +49,7 @@ export const BannerInfo = (props: Props) => {
                         : "text-[#555] text-[14px] sm:text-[16px] "
                 }`}
             >
-                {props.description}
+                {props.description || ""}
             </Text>
 
             {/* SAMPLES */}

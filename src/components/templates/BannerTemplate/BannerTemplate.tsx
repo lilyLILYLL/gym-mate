@@ -28,7 +28,7 @@ export const BannerTemplate = (props: Props) => {
             {/* CONTENT */}
 
             <div
-                className={`w-11/12 lg:w-5/6 mx-auto  flex flex-col gap-20  justify-center items-center text-center  ${
+                className={`w-11/12  xl:w-5/6 mx-auto  flex flex-col gap-20  justify-center items-center text-center  ${
                     props.col
                         ? "lg:[&>*:first-child]:w-1/2 [&>*:first-child]:w-5/6 [&>*:first-child]:items-center"
                         : "lg:grid lg:grid-cols-2 lg:gap-20 lg:text-start "

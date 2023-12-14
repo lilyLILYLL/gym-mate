@@ -3,3 +3,4 @@ export * from "./SampleCard";
 export * from "./TrainerCard";
 export * from "./CourseCard";
 export * from "./BenefitCard";
+export * from "./ClassCard";

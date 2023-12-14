@@ -1,4 +1,10 @@
-import { SampleModel, TrainerInfoModel, BenefitCardModel, CourseModel } from "./types";
+import {
+    SampleModel,
+    TrainerInfoModel,
+    BenefitCardModel,
+    CourseModel,
+    ClassModel,
+} from "./types";
 import {
     Workout,
     Equiments,
@@ -13,6 +19,30 @@ import {
     PricingImg1,
     PricingImg2,
     PricingImg3,
+    bodybuilding,
+    box,
+    cross,
+    fitness,
+    karate,
+    meditation,
+    mma,
+    powerlifting,
+    running,
+    workout,
+    yoga,
+    features_meditation,
+    features_karate,
+    features_karate_red,
+    features_yoga,
+    features_yoga_red,
+    features_workout,
+    features_workout_red,
+    features_bike_red,
+    features_gym_bike,
+    features_dumbell,
+    features_dumbell_red,
+    features_boxer,
+    features_boxer_red,
 } from "@assets";
 
 export const WHO_WE_ARE_BANNER_SAMPLES: SampleModel[] = [
@@ -112,5 +142,37 @@ export const WHAT_WE_PROVIDE: BenefitCardModel[] = [
         title: "NUTRITIONS",
         description:
             "Our team will work with you to create a personalized meal plan that helps you reach your specific health goals.",
+    },
+];
+export const CLASSES: ClassModel[] = [
+    {
+        img: [meditation, features_karate, features_karate_red],
+        name: "Meditation",
+        time: "Wednesday: 9:00am-10:00am",
+    },
+    {
+        img: [mma, features_boxer, features_boxer_red],
+        name: "Martial Arts",
+        time: "Wednesday: 9:00am-10:00am",
+    },
+    {
+        img: [powerlifting, features_dumbell, features_dumbell_red],
+        name: "Power",
+        time: "Wednesday: 9:00am-10:00am",
+    },
+    {
+        img: [running, features_gym_bike, features_bike_red],
+        name: "Running",
+        time: "Wednesday: 9:00am-10:00am",
+    },
+    {
+        img: [workout, features_workout, features_workout_red],
+        name: "Workout",
+        time: "Wednesday: 9:00am-10:00am",
+    },
+    {
+        img: [yoga, features_yoga, features_yoga_red],
+        name: "Yoga",
+        time: "Wednesday: 9:00am-10:00am",
     },
 ];

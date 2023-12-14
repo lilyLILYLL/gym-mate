@@ -24,7 +24,7 @@ import {
     WHY_CHOOSE_US_SAMPLES,
     trainers,
 } from "@shared";
-import { BenefitList } from "@organisms";
+import { BenefitList, ClassesList } from "@organisms";
 
 type Props = {};
 
@@ -69,6 +69,16 @@ const Home = (props: Props) => {
                     }
                 />
                 <GirlRunningImage />
+            </BannerTemplate>
+
+            {/* CLASSES SECITON */}
+            <BannerTemplate col>
+                <BannerInfo
+                    title="OUR FEATURED CLASSES"
+                    header="We Are Offering Best Flexible Classes"
+                    type="secondary-black"
+                />
+                <ClassesList />
             </BannerTemplate>
 
             {/* WHY CHOOSE US SECTION */}

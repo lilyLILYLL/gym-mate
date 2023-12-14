@@ -13,3 +13,20 @@
 .animation-button > .button-red {
     border: 0.5px solid red;
 }
+
+.class-card .class-img {
+    transition: transform 0.4s ease-in-out;
+}
+.class-card .class-mini-img {
+    transition: all 0.4s;
+}
+
+.class-card:hover .class-mini-img .class-mini-img-red {
+    display: block;
+}
+.class-card:hover > .class-img {
+    transform: scale(1.5);
+}
+.class-card:hover > .class-mini-img {
+    background-color: white;
+}

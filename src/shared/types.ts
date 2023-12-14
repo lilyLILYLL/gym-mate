@@ -23,3 +23,8 @@ export type BenefitCardModel = {
     title: string;
     description: string;
 };
+export type ClassModel = {
+    img: StaticImageData[];
+    name: string;
+    time: string;
+};
