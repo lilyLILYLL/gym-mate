@@ -1,3 +1,3 @@
-import Footer from "./logo-footer.svg";
+import Footer_Logo from "./logo-footer.svg";
 import Logo from "./logo.svg";
-export { Footer, Logo };
+export { Footer_Logo, Logo };
