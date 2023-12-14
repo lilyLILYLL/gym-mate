@@ -43,6 +43,7 @@ import {
     features_dumbell_red,
     features_boxer,
     features_boxer_red,
+    cycling,
 } from "@assets";
 
 export const WHO_WE_ARE_BANNER_SAMPLES: SampleModel[] = [
@@ -146,6 +147,11 @@ export const WHAT_WE_PROVIDE: BenefitCardModel[] = [
 ];
 export const CLASSES: ClassModel[] = [
     {
+        img: [cycling, features_gym_bike, features_bike_red],
+        name: "Running",
+        time: "Wednesday: 9:00am-10:00am",
+    },
+    {
         img: [meditation, features_karate, features_karate_red],
         name: "Meditation",
         time: "Wednesday: 9:00am-10:00am",
@@ -160,11 +166,7 @@ export const CLASSES: ClassModel[] = [
         name: "Power",
         time: "Wednesday: 9:00am-10:00am",
     },
-    {
-        img: [running, features_gym_bike, features_bike_red],
-        name: "Running",
-        time: "Wednesday: 9:00am-10:00am",
-    },
+
     {
         img: [workout, features_workout, features_workout_red],
         name: "Workout",

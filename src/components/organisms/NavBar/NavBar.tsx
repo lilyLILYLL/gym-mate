@@ -1,5 +1,5 @@
 import React from "react";
-import { Logo } from "../../assets";
+import { Logo } from "@assets";
 import Image from "next/image";
 import { LinkText } from "@atoms";
 import { SCREENS } from "@shared";

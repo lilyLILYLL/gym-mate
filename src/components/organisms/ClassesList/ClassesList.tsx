@@ -6,7 +6,7 @@ type Props = {};
 
 export const ClassesList = (props: Props) => {
     return (
-        <div className="w-full flex flex-col gap-6 md:grid md:grid-cols-4 md:grid-rows-2 md:h-[550px] md:grid-flow-row md:gap-3 ">
+        <div className="w-full flex flex-col gap-6 md:grid md:grid-cols-4 md:grid-rows-2 md:h-[600px] md:grid-flow-row md:gap-3 ">
             {CLASSES.map((item, index) => (
                 <div
                     key={index}

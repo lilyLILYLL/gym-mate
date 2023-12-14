@@ -1,6 +1,6 @@
 import React from "react";
 import { WHAT_WE_PROVIDE } from "@shared";
-import { BenefitCard } from "../molecules/BenefitCard";
+import { BenefitCard } from "@molecules";
 type Props = {};
 
 export const BenefitList = (props: Props) => {

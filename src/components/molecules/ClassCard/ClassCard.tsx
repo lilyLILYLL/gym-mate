@@ -11,15 +11,15 @@ type Props = {
 
 export const ClassCard = (props: Props) => {
     return (
-        <div className="class-card w-full h-full relative  cursor-pointer overflow-hidden">
+        <div className="class-card w-full h-full relative  cursor-pointer overflow-hidden ">
             <Image
                 src={props.class.img[0]}
                 alt="img"
-                className="class-img w-full h-full object-cover  absolute  "
+                className="class-img w-full h-full object-cover  absolute grayscale object-center"
             />
 
-            <div className="hover:shadow-transparent shadow-[inset_-3px_-3px_8px_160px_rgba(0,0,0,0.6)] w-full h-full absolute"></div>
-            <div className="class-mini-img sm:h-[70px] sm:w-[160px] h-[50px] w-[130px] absolute bg-[hsla(0,0%,100%,.3)] rounded-[40px] rotate-[35deg] left-[-70px] sm:top-[20%] top-[10%]">
+            <div className="hover:shadow-transparent shadow-[inset_2px_2px_8px_160px_rgba(0,0,0,0.6)] w-full h-full absolute "></div>
+            <div className="class-mini-img   sm:h-[70px] sm:w-[160px] h-[50px] w-[130px] absolute bg-[hsla(0,0%,100%,.3)] rounded-[40px] rotate-[35deg] left-[-70px] sm:top-[20%] top-[10%]">
                 <Image
                     src={props.class.img[1]}
                     alt="img"

@@ -1,19 +1,21 @@
+/* button animation */
 .animation-button:hover > .animattion-div {
     left: 0;
     bottom: 0;
     border-width: 2px;
 }
 .animation-button > .animattion-div {
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s linear;
     border: 0.5px solid #555;
-    left: 11px;
-    bottom: 11px;
+    left: 14px;
+    bottom: 14px;
 }
 
 .animation-button > .button-red {
     border: 0.5px solid red;
 }
 
+/* class card */
 .class-card .class-img {
     transition: transform 0.4s ease-in-out;
 }
@@ -25,7 +27,8 @@
     display: block;
 }
 .class-card:hover > .class-img {
-    transform: scale(1.5);
+    transform: scale(1.2);
+    filter: grayscale(0);
 }
 .class-card:hover > .class-mini-img {
     background-color: white;

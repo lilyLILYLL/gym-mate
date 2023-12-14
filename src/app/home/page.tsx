@@ -17,7 +17,7 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { BannerTemplate } from "@templates";
-import { BannerInfo, CourseCard, TrainerCard } from "@molecules";
+import { BannerInfo, CourseCard, TrainerCard, AdvertisedBar } from "@molecules";
 import {
     COURSES,
     WHO_WE_ARE_BANNER_SAMPLES,
@@ -82,7 +82,12 @@ const Home = (props: Props) => {
             </BannerTemplate>
 
             {/* WHY CHOOSE US SECTION */}
-            <BannerTemplate bgImg="https://i.ibb.co/ZNn1YJj/choose-bg.jpg">
+            <BannerTemplate
+                bgImg="https://i.ibb.co/ZNn1YJj/choose-bg.jpg"
+                containerClassName="sm:pt-[250px]"
+            >
+                <AdvertisedBar />
+
                 <BannerInfo
                     title="WHY CHOOSE US"
                     header=" We Can Give A Shape Of Your Body Here!"
