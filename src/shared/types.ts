@@ -17,3 +17,9 @@ export type CourseModel = {
     price: number;
     classes: string[];
 };
+
+export type BenefitCardModel = {
+    img: string;
+    title: string;
+    description: string;
+};

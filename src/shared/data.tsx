@@ -1,4 +1,4 @@
-import { SampleModel, TrainerInfoModel, CourseModel } from "./types";
+import { SampleModel, TrainerInfoModel, BenefitCardModel, CourseModel } from "./types";
 import {
     Workout,
     Equiments,
@@ -91,5 +91,26 @@ export const COURSES: CourseModel[] = [
             "Cycling",
         ],
         img: PricingImg3,
+    },
+];
+
+export const WHAT_WE_PROVIDE: BenefitCardModel[] = [
+    {
+        img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAA6BAMAAADhKQK+AAAAKlBMVEUAAAD/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADR73ev4AAAADXRSTlMAON6JoykSCsBccRxJBhRO3gAAAedJREFUSMeVlbtKA0EUhs9q1ihByKogCELEQpuAIlgoAcVbteALBLSykECwFAVttNpHEEQbG0EfQNBCrARzMYmR/13cTSack93ZnfhVO/DNzNmfMzMU5dhxjiiZmTx8atMJiuVBcRnrjIGZi3eMlhWUU38/opHDB/js6SQXwKb6PguKy0adEwCr1MP2rZ+IYwPYDW2+EZaKQIUkKaAectJ5VA+oj5vIUqPAggpivbdhpKpHVMvUoYADrmBfOhmgqT6BLIebk9IQT2KJCmhLaTYYssRT5c/kkZMSZ7ckkgOyUuL9mjKAKumkkgzhHBWtlBKT6RNfWsmWlXvYCEk8MH5TQf2etdZZNfOkk2ZVNEVcWAAVajqphC8l14fRSgFljTSORi/7bbRcgBIkG12+9ZIKsAgf2QXLjk9IsnmhAHTJsaRKh2pwITWkpI73gsivQ7Mr8Q43QYP3OF3psK9yavBNcU16XkRDPVMEbg8jLpYoAU7WhAWUjdIoWmSkiIpZ8pAzlzRI3eeokpH8ACWlEI7SXnyKxC1346YIL/RL/ZSAV5KkPW7p2Bt5Qnfbu/1vzjD6l+YmnpOjUJF8Htqqiil5NiRpFz7zb44z6cHnNvbBY66MTzCwQ3Fk7pTS+qAEDu8BbL3Tv/kDDIZWVPaeBKIAAAAASUVORK5CYII=",
+        title: "PROGRESSION",
+        description:
+            "Our team of experts will work with you to create a customized plan that helps you achieve success one step at a time.",
+    },
+    {
+        img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAA6BAMAAADhKQK+AAAAKlBMVEUAAAD/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADR73ev4AAAADXRSTlMAEjiJSaPeKcAcCnFcosoqLgAAAX1JREFUSMfd1L9Kw1AUBvDT2j8iFpoHCJQW3ALFCk6FgODm4OQUcHAtCI5S8AEsOLgWHFwLvkChLyA0LamN8r2L94TT5EZzewcHod90uP01H+EkoZ8pj9YtsiUAIpupQMW3oAajuQWNGcUW5DFaWJDLKLSgGqNrC6ozuiVLhsAHWdM5pr+n3k5juX9g+2ZGGQrNy80SWds4LXNbH0mmwNzYFsnF2sCyGE2AT0GtwLSbAPA3qGbYchlY0wbVgS9DW5gimgJNQ1uG9oEHQ1uGSoUPcYPbMkQXwMsv1FdtOqoC3cI2HR0MuO+sdyrAw5JfgFhHfLri0gULx2kqxG1vyS9JZmrc4xMPCxcgIFSoDP7fcwDJo1rKAHEecdurEGFPY6zziNs85NKtAL6OwG2Cbs4FUYBwmEexoCuiI0ETRK6GzPk/FDkq78ClI/FkDjS0TFao7d2Vub/rqOQ4PG1HcnLXOzGgfHYfDQFf+6LNClEVq3Q+VHNxOn4232szfQMqNmF3JPiFjQAAAABJRU5ErkJggg==",
+        title: "WORKOUT",
+        description:
+            "With a variety of workouts to choose from, you'll have everything you need to get into the best shape of your life.",
+    },
+    {
+        img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAA6BAMAAADhKQK+AAAAKlBMVEUAAAD/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADT/ADR73ev4AAAADXRSTlMAEjiJByneo1zAcRxJVBTmlwAAARhJREFUSMfV1T8LgkAYx/GnUmoocKktiNuF4FranJqj3a1V6A0IvQEh6A34BoJoaO4lpFT2h3svaUVXduc9kEX9Vj+g3pcS4Hm1EMBcQ/bUqEiIyeKFhLSkyGb3baXI5CgUghl72TFtSkwwP/1WIrR+QVNKXX49orQrQAZAk6MAoPBp1ONoKEUauc+Souf9DNJaCGSO1aiyR9zO9VVoAOUofqrbmRtCpDkd91IjCyXpkne7hZHcTmcR4pzsAIH0dp5Z+gi0RGSpYrJ4IxVaQHkXP5VzPXFLjBzf2yiz2LvHLJYsywGT5YTJMsnzJ2UgUKOtRsUolyx1qCRZ6HXiw9TY2AswWVb8n+y9LNuvZ/k/NE8jXYAyvpxntlVgyqd1SKUAAAAASUVORK5CYII=",
+        title: "NUTRITIONS",
+        description:
+            "Our team will work with you to create a personalized meal plan that helps you reach your specific health goals.",
     },
 ];
