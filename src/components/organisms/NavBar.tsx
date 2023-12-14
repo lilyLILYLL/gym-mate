@@ -48,7 +48,7 @@ export const NavBar = (props: Props) => {
                 {/* USER ICON */}
                 <Link
                     href={"/"}
-                    className="w-[2rem]"
+                    className="w-[2rem] hidden sm:block"
                 >
                     <IconUserCircle
                         color="white"
@@ -59,7 +59,7 @@ export const NavBar = (props: Props) => {
                 {/* SIDE BAR TOGGLE ICON */}
                 <Link
                     href={"/"}
-                    className="w-[2rem]"
+                    className="w-[2rem] hidden sm:block"
                 >
                     <IconAlignBoxLeftMiddle
                         color="white"
@@ -80,6 +80,7 @@ export const NavBar = (props: Props) => {
                         }
                         type="primary"
                         title="JOIN CLASS NOW"
+                        containerClassName="hidden md:inline-flex "
                     />
                 </Link>
             </div>

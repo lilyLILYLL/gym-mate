@@ -1,7 +1,7 @@
 import React from "react";
 import { CourseModel } from "@shared";
 import Image from "next/image";
-import { Text, Button } from "@atoms";
+import { Text, AnimationButton } from "@atoms";
 import { IconArrowRight } from "@tabler/icons-react";
 
 type Props = {
@@ -41,16 +41,9 @@ export const CourseCard = ({ course }: Props) => {
                         </Text>
                     ))}
                 </div>
-                <Button
-                    animation
-                    title="TAKE A TOUR"
-                    type="danger"
-                    postfix={
-                        <IconArrowRight
-                            className="w-8"
-                            color="white"
-                        />
-                    }
+                <AnimationButton
+                    title="PURCHASE NOW"
+                    backgroundColor="red"
                 />
             </div>
         </div>

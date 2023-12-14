@@ -1,9 +1,43 @@
 import React from "react";
+import "@styles/Animation.css";
+import { IconArrowRight } from "@tabler/icons-react";
 
 type Props = {
-    children: JSX.Element;
+    title: string;
+    backgroundColor: "white" | "red" | "gray";
 };
 
 export const AnimationButton = (props: Props) => {
-    return <div className="border border-[#555] w-fit p-2 ">{props.children}</div>;
+    let buttonStyle = "";
+    switch (props.backgroundColor) {
+        case "red":
+            buttonStyle = "bg-red-600 text-white";
+            break;
+        case "gray":
+            buttonStyle = "bg-[#555] text-white";
+            break;
+        case "white":
+            buttonStyle = "bg-white text-black";
+            break;
+        default:
+            break;
+    }
+    return (
+        <div
+            className={`animation-button relative w-fit    text-sm font-bold cursor-pointer   `}
+        >
+            <div
+                className={`animattion-div button-${props.backgroundColor} w-full h-full absolute z-10`}
+            ></div>
+            <div
+                className={` w-full h-full flex flex-row gap-2 relative z-20 py-3 px-6 ${buttonStyle}`}
+            >
+                {props.title}
+                <IconArrowRight
+                    className="w-5"
+                    color={props.backgroundColor === "white" ? "red" : "white"}
+                />
+            </div>
+        </div>
+    );
 };

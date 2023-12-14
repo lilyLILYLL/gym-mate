@@ -19,7 +19,7 @@ export const TextWithBg = ({ children, primary }: Props) => {
             />
 
             <div
-                className={`z-20  text-center text-base font-medium ${
+                className={`z-20  text-center  text-sm sm:text-base font-bold ${
                     primary ? "text-black" : "text-white"
                 }`}
             >

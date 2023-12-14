@@ -38,6 +38,13 @@ const Home = (props: Props) => {
                         header="  MAKE YOUR BODY"
                         description="FIT & PERFECT"
                         type="primary"
+                        containerClassName="absolute lg:left-[100%] self-center top-[100px]   "
+                        button={
+                            <AnimationButton
+                                title="OUR CLASSES"
+                                backgroundColor="white"
+                            />
+                        }
                     />
                 }
             />
@@ -55,16 +62,9 @@ const Home = (props: Props) => {
                         samples={WHO_WE_ARE_BANNER_SAMPLES}
                         type="secondary-black"
                         button={
-                            <Button
-                                animation
-                                title="OUR CLASSES"
-                                type="secondary"
-                                postfix={
-                                    <IconArrowRight
-                                        className="w-8"
-                                        color="red"
-                                    />
-                                }
+                            <AnimationButton
+                                title="TAKE A TOUR"
+                                backgroundColor="gray"
                             />
                         }
                     />
@@ -86,16 +86,9 @@ const Home = (props: Props) => {
                         containerClassName="order-last"
                         type="secondary-white"
                         button={
-                            <Button
-                                animation
+                            <AnimationButton
                                 title="TAKE A TOUR"
-                                type="secondary"
-                                postfix={
-                                    <IconArrowRight
-                                        className="w-8"
-                                        color="red"
-                                    />
-                                }
+                                backgroundColor="gray"
                             />
                         }
                     />

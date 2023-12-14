@@ -13,7 +13,7 @@ export const ChooseUsImage = (props: Props) => {
             <Image
                 src={main_img}
                 alt="choose_us_banner"
-                className="lg:h-full md:w-[400px] w-[350px] "
+                className="lg:h-full md:w-[400px] sm:w-[350px] w-[260px]"
                 objectFit="cover"
             />
         </div>

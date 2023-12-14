@@ -16,27 +16,37 @@ type Props = {
 };
 
 export const BannerInfo = (props: Props) => {
-    let headerStyle =
-        props.type === "primary"
-            ? "text-white text-[48px]"
-            : props.type === "secondary-black"
-            ? "text-black text-[35px]"
-            : "text-white text-[35px]";
+    let headerStyle = "";
+    switch (props.type) {
+        case "primary":
+            headerStyle = "text-white sm:text-[45px] text-[40px]";
+            break;
+        case "secondary-black":
+            headerStyle = "text-black sm:text-[35px] text-[30px]";
+            break;
+        case "secondary-white":
+            headerStyle = "text-white sm:text-[35px] text-[30px]";
+            break;
+        default:
+            break;
+    }
 
     return (
         <div
-            className={`h-fit lg:w-full w-3/4 mx-auto flex flex-col gap-6 justify-center items-center lg:items-start relative ${props.containerClassName}`}
+            className={`h-fit lg:w-full sm:w-3/4 w-full  mx-auto flex flex-col gap-6 justify-center items-center lg:items-start relative ${props.containerClassName}`}
         >
             {/* TITLE */}
             <TextWithBg primary={props.type === "primary"}>{props.title}</TextWithBg>
+
             {/* HEADER */}
             <Text className={` font-bold ${headerStyle}`}>{props.header}</Text>
+
             {/* DESCRIPTION */}
             <Text
                 className={`${
                     props.type === "primary"
-                        ? "text-white text-[36px]"
-                        : "text-[#555] text-[1rem] "
+                        ? "text-white text-[30px] sm:text-[36px]"
+                        : "text-[#555] text-[14px] sm:text-[16px] "
                 }`}
             >
                 {props.description}
