@@ -55,7 +55,7 @@ export const BannerInfo = (props: Props) => {
             {/* SAMPLES */}
             {props.samples && (
                 <div
-                    className={`pb-6 ${
+                    className={` ${
                         props.type === "secondary-black"
                             ? "flex flex-col w-1/2 sm:flex-row sm:w-full "
                             : " flex flex-col gap-4  w-5/6 md:w-2/3 lg:w-full sm:grid  sm:grid-cols-2 grid-rows-2 sm:gap-y-8 sm:gap-x-10 text-left"

@@ -26,7 +26,7 @@ export const AnimationButton = (props: Props) => {
     }
     return (
         <div
-            className={`animation-button relative w-fit    text-sm font-bold cursor-pointer   `}
+            className={`animation-button relative w-fit    text-sm font-bold cursor-pointer mt-4 `}
         >
             <div
                 className={`animattion-div button-${props.backgroundColor} w-full h-full absolute z-10`}

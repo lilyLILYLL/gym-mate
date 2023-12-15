@@ -12,7 +12,7 @@ type Props = {};
 
 export const Footer = (props: Props) => {
     return (
-        <div className="lg:w-5/6 sm:w-11/12 w-1/2 mx-auto  py-16 flex sm:flex-row gap-20 flex-col justify-center ">
+        <div className="lg:w-5/6 sm:w-11/12 w-1/2 mx-auto  py-20 flex sm:flex-row gap-20 flex-col justify-center ">
             {/* genneral */}
             <div className="flex flex-col gap-6">
                 <Image

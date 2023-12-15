@@ -5,3 +5,4 @@ export * from "./CourseCard";
 export * from "./BenefitCard";
 export * from "./ClassCard";
 export * from "./AdvertisedBar";
+export * from "./Header";
