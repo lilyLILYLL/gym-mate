@@ -8,6 +8,9 @@ type Props = {
 };
 
 export const SideNavBar = (props: Props) => {
+    const handleToggleSideBar = React.useCallback(() => {
+        props.toggleSideBar();
+    }, []);
     return (
         <div
             className={`side-bar ${
@@ -15,7 +18,7 @@ export const SideNavBar = (props: Props) => {
             } fixed top-0 h-screen md:w-[400px] w-full bg-white  transition-all duration-500 ease-in-out`}
         >
             <IconX
-                onClick={props.toggleSideBar}
+                onClick={handleToggleSideBar}
                 className="text-red-500 cursor-pointer w-8 absolute right-[2rem] top-[2rem]"
             />
             <div className="flex flex-col gap-4 justify-center h-5/6">
@@ -25,7 +28,7 @@ export const SideNavBar = (props: Props) => {
                         label={item}
                         key={index}
                         textClassName="text-black text-[40px]"
-                        onClick={props.toggleSideBar}
+                        onClick={handleToggleSideBar}
                     />
                 ))}
             </div>

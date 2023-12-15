@@ -11,6 +11,7 @@ import {
 } from "@tabler/icons-react";
 import { galleryImgs } from "@shared";
 import Image from "next/image";
+import React from "react";
 
 type Props = {
     isOpen: boolean;
@@ -18,14 +19,18 @@ type Props = {
 };
 
 export const SideAboutUsBar = (props: Props) => {
+    const handleToggleSideBar = React.useCallback(() => {
+        props.toggleSideBar();
+    }, []);
+
     return (
         <div
-            className={`side-bar ${
+            className={` fixed top-0 h-screen md:w-[400px]  bg-white  transition-all duration-500 ease-in-out py-8 overflow-y-scroll ${
                 props.isOpen ? "left-0" : "left-[-100%]"
-            } fixed top-0 h-screen md:w-[400px]  bg-white  transition-all duration-500 ease-in-out py-8 overflow-y-scroll`}
+            }`}
         >
             <IconX
-                onClick={props.toggleSideBar}
+                onClick={handleToggleSideBar}
                 className="text-red-500 cursor-pointer w-8 absolute right-[2rem] top-[2rem]"
             />
 
