@@ -14,7 +14,7 @@ export const SideNavBar = (props: Props) => {
     return (
         <div
             className={`side-bar ${
-                props.isOpen ? "left-0" : "left-[-100%]"
+                props.isOpen ? "left-0" : "left-[-50%]"
             } fixed top-0 h-screen md:w-[400px] w-full bg-white  transition-all duration-500 ease-in-out`}
         >
             <IconX

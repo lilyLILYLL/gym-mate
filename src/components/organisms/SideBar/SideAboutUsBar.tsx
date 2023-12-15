@@ -25,8 +25,8 @@ export const SideAboutUsBar = (props: Props) => {
 
     return (
         <div
-            className={` fixed top-0 h-screen md:w-[400px]  bg-white  transition-all duration-500 ease-in-out py-8 overflow-y-scroll ${
-                props.isOpen ? "left-0" : "left-[-100%]"
+            className={` fixed top-0 h-screen md:w-[400px]  bg-white  transition-all duration-500 ease-in-out py-8 ${
+                props.isOpen ? "left-0" : "left-[-50%]"
             }`}
         >
             <IconX
@@ -34,7 +34,7 @@ export const SideAboutUsBar = (props: Props) => {
                 className="text-red-500 cursor-pointer w-8 absolute right-[2rem] top-[2rem]"
             />
 
-            <div className=" w-5/6 mx-auto flex flex-col gap-14 m-auto">
+            <div className=" w-5/6 mx-auto flex flex-col justify-between h-full">
                 <Image
                     src={Footer_Logo}
                     alt="logo"
@@ -50,7 +50,6 @@ export const SideAboutUsBar = (props: Props) => {
                         and supportive environment.
                     </Text>
                 </div>
-
                 {/* gallery section */}
                 <div className="flex flex-col gap-4">
                     <Text className="font-bold text-xl">Gallery</Text>
@@ -65,7 +64,6 @@ export const SideAboutUsBar = (props: Props) => {
                         ))}
                     </div>
                 </div>
-
                 {/* contact info section */}
                 <div className="flex flex-col gap-4">
                     <Text className="font-bold text-xl">Contact Info</Text>
@@ -84,8 +82,7 @@ export const SideAboutUsBar = (props: Props) => {
                         <Text> gymate@gymail.com </Text>
                     </div>
                 </div>
-
-                {/* social media section */}
+                {/* social media section
                 <div className="flex flex-col gap-4">
                     <Text className="font-bold text-xl">Follow Us</Text>
                     <div className="flex flex-row gap-4">
@@ -93,7 +90,7 @@ export const SideAboutUsBar = (props: Props) => {
                         <IconBrandInstagram className="w-14 text-white bg-red-500 rounded-full p-4 cursor-pointer" />
                         <IconBrandTwitterFilled className="w-14 text-white bg-red-500 rounded-full p-4 cursor-pointer" />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
