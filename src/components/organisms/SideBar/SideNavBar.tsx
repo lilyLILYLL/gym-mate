@@ -27,7 +27,7 @@ export const SideNavBar = (props: Props) => {
                         to={item}
                         label={item}
                         key={index}
-                        textClassName="text-black text-[40px]"
+                        textClassName="text-black "
                         onClick={handleToggleSideBar}
                     />
                 ))}

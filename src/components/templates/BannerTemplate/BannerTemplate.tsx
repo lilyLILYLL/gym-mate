@@ -10,12 +10,12 @@ type Props = {
 export const BannerTemplate = (props: Props) => {
     return (
         <div
-            className={`min-h-screen py-36  bg-home-bg shadow-lg shadow-slate-200  relative ${props.containerClassName}`}
+            className={`min-h-screen py-20 mt-4  bg-home-bg shadow-lg shadow-slate-200  relative ${props.containerClassName}`}
             style={{
                 backgroundImage: `url('${
                     typeof props.bgImg === "string" ? props.bgImg : ""
                 }')`,
-                backgroundPosition: "40% 10%",
+                backgroundPosition: "50% 10%",
             }}
         >
             {/* CUSTOM Background IMG */}

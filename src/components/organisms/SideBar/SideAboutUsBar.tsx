@@ -27,8 +27,8 @@ export const SideAboutUsBar = (props: Props) => {
         <div
             className={` ${
                 props.isOpen ? "left-0" : "left-[-100%]"
-            } fixed top-0 md:w-[400px] h-full  w-full bg-white  transition-all duration-500 ease-in-out py-8 overflow-y-scroll
-            flex flex-col gap-10 px-10`}
+            } fixed top-0 md:w-[400px]  h-full  w-full bg-white  transition-all duration-500 ease-in-out py-10 overflow-y-scroll
+            flex flex-col gap-10 px-12`}
         >
             <IconX
                 onClick={handleToggleSideBar}

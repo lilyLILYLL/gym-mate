@@ -38,7 +38,7 @@ const Home = (props: Props) => {
                     header="  MAKE YOUR BODY"
                     description="FIT & PERFECT"
                     type="primary"
-                    containerClassName="absolute lg:left-[100%] self-center top-[100px]   "
+                    containerClassName="absolute lg:left-[100%] self-center top-[200px]   "
                     button={
                         <AnimationButton
                             title="OUR CLASSES"
