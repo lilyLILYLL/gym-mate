@@ -19,7 +19,7 @@ type Props = {};
 
 export const NavBar = (props: Props) => {
     const [isSideNavBarOpen, setIsSideNavBarOpen] = React.useState(false);
-    const [iseContactUsSideBarOpen, setIsContactUsSideBarOpen] = React.useState(false);
+    const [isContactUsSideBarOpen, setIsContactUsSideBarOpen] = React.useState(false);
 
     // handle toggle side bar
     const handleToggleSideNavBar = () => setIsSideNavBarOpen((prev) => !prev);
@@ -37,7 +37,7 @@ export const NavBar = (props: Props) => {
 
             {/* about us sidebar */}
             <SideAboutUsBar
-                isOpen={iseContactUsSideBarOpen}
+                isOpen={isContactUsSideBarOpen}
                 toggleSideBar={handleToggleContactUsSideBar}
             />
 
