@@ -5,9 +5,6 @@ import {
     IconMapPinFilled,
     IconPhoneFilled,
     IconMailFilled,
-    IconBrandFacebookFilled,
-    IconBrandInstagram,
-    IconBrandTwitterFilled,
 } from "@tabler/icons-react";
 import { galleryImgs } from "@shared";
 import Image from "next/image";
@@ -25,9 +22,9 @@ export const SideAboutUsBar = (props: Props) => {
 
     return (
         <div
-            className={` fixed top-0 h-screen md:w-[400px]  bg-white  transition-all duration-500 ease-in-out py-8 ${
+            className={` ${
                 props.isOpen ? "left-0" : "left-[-50%]"
-            }`}
+            } fixed top-0 h-screen md:w-[400px] w-full bg-white  transition-all duration-500 ease-in-out py-8`}
         >
             <IconX
                 onClick={handleToggleSideBar}
