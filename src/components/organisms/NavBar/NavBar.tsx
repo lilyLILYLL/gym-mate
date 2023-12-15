@@ -71,22 +71,19 @@ export const NavBar = (props: Props) => {
                 />
                 {/* USER ICON */}
                 <Link
-                    href={"/signin"}
+                    href={"/"}
                     className="w-[2rem] hidden sm:block cursor-pointer  hover:text-red-500 text-white"
                 >
                     <IconUserCircle stroke={2} />
                 </Link>
 
                 {/* contact us side bar TOGGLE ICON */}
-                <Link
-                    href={"/"}
+
+                <IconAlignBoxLeftMiddle
+                    stroke={2}
+                    onClick={handleToggleContactUsSideBar}
                     className="w-[2rem] hidden sm:block cursor-pointer  hover:text-red-500 text-white"
-                >
-                    <IconAlignBoxLeftMiddle
-                        stroke={2}
-                        onClick={handleToggleContactUsSideBar}
-                    />
-                </Link>
+                />
 
                 {/* JOIN CLASS BUTTON */}
                 <Link
