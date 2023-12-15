@@ -19,6 +19,7 @@ export const AdvertisedBar = (props: Props) => {
                 <AnimationButton
                     title="JOIN WITH US"
                     backgroundColor="white"
+                    to="/contact"
                 />
             </div>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 type Props = {};
 
 const Classes = (props: Props) => {
-    return <div>Classes</div>;
+    return <div className="h-screen pt-36">Classes</div>;
 };
 
 export default Classes;

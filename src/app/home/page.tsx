@@ -43,6 +43,7 @@ const Home = (props: Props) => {
                         <AnimationButton
                             title="OUR CLASSES"
                             backgroundColor="white"
+                            to="/classes"
                         />
                     }
                 />
@@ -65,6 +66,7 @@ const Home = (props: Props) => {
                         <AnimationButton
                             title="TAKE A TOUR"
                             backgroundColor="gray"
+                            to="/classes"
                         />
                     }
                 />
@@ -101,6 +103,7 @@ const Home = (props: Props) => {
                         <AnimationButton
                             title="TAKE A TOUR"
                             backgroundColor="gray"
+                            to="/classes"
                         />
                     }
                 />

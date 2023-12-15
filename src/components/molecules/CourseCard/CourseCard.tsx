@@ -2,7 +2,6 @@ import React from "react";
 import { CourseModel } from "@shared";
 import Image from "next/image";
 import { Text, AnimationButton } from "@atoms";
-import { IconArrowRight } from "@tabler/icons-react";
 
 type Props = {
     course: CourseModel;
@@ -44,6 +43,7 @@ export const CourseCard = ({ course }: Props) => {
                 <AnimationButton
                     title="PURCHASE NOW"
                     backgroundColor="red"
+                    to="/contact"
                 />
             </div>
         </div>

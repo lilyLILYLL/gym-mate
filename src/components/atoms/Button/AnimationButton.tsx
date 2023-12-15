@@ -1,10 +1,12 @@
 import React from "react";
 import "@styles/Animation.css";
 import { IconArrowRight } from "@tabler/icons-react";
+import Link from "next/link";
 
 type Props = {
     title: string;
     backgroundColor: "white" | "red" | "gray";
+    to?: string;
 };
 
 export const AnimationButton = (props: Props) => {
@@ -29,15 +31,17 @@ export const AnimationButton = (props: Props) => {
             <div
                 className={`animattion-div button-${props.backgroundColor} w-full h-full absolute z-10`}
             ></div>
-            <div
-                className={` w-full h-full flex flex-row gap-2 relative z-20 py-3 px-6 ${buttonStyle}`}
-            >
-                {props.title}
-                <IconArrowRight
-                    className="w-5"
-                    color={props.backgroundColor === "white" ? "red" : "white"}
-                />
-            </div>
+            <Link href={props.to || ""}>
+                <div
+                    className={` w-full h-full flex flex-row gap-2 relative z-20 py-3 px-6 ${buttonStyle}`}
+                >
+                    {props.title}
+                    <IconArrowRight
+                        className="w-5"
+                        color={props.backgroundColor === "white" ? "red" : "white"}
+                    />
+                </div>
+            </Link>
         </div>
     );
 };
