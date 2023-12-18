@@ -1,9 +1,28 @@
 import React from "react";
+import { ClassCard, Header } from "@molecules";
+import { CLASSES } from "@shared";
 
 type Props = {};
 
 const Classes = (props: Props) => {
-    return <div className="h-screen pt-36">Classes</div>;
+    return (
+        <div className="pt-[500px] h-fit">
+            <Header title="Classes" />
+
+            {/* classes */}
+            <div className="2xl:w-3/4 w-11/12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row  mx-auto gap-6">
+                {CLASSES.map((item, index) => (
+                    <ClassCard
+                        key={index}
+                        class={item}
+                        type={"type2"}
+                    />
+                ))}
+            </div>
+
+            {/* PRICING SECTION */}
+        </div>
+    );
 };
 
 export default Classes;

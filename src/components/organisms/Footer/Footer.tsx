@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer_Logo } from "@assets";
 import Image from "next/image";
-import { Text } from "@atoms";
+import { Text, TextWithUnderLine } from "@atoms";
 import {
     IconBrandFacebookFilled,
     IconBrandTwitterFilled,
@@ -35,12 +35,7 @@ export const Footer = (props: Props) => {
 
             {/* classes */}
             <div className="flex flex-col gap-4 justify-center ">
-                <Text
-                    className="relative mb-2 text-xl font-bold after:w-[70px] after:bg-red-500 after:h-[4px] after:content-[' ']
-                after:absolute after:bottom-[-4px] after:left-0"
-                >
-                    Our Classes
-                </Text>
+                <TextWithUnderLine>Our Classes</TextWithUnderLine>
 
                 <Text className="text-sm text-[#555] hover:text-red-400 hover:font-bold ">
                     Fitness Classes
@@ -61,12 +56,8 @@ export const Footer = (props: Props) => {
 
             {/* working hours */}
             <div className=" flex flex-col gap-4 justify-center">
-                <Text
-                    className="relative mb-2  text-xl font-bold after:w-[70px] after:bg-red-500 after:h-[4px] after:content-[' ']
-                after:absolute after:bottom-[-4px] after:left-0"
-                >
-                    Working Hours
-                </Text>
+                <TextWithUnderLine> Working Hours</TextWithUnderLine>
+
                 <Text className="text-sm text-[#555]  font-bold">Monday - Friday:</Text>
                 <Text className="text-sm text-[#555] ">7:00am - 21:00pm</Text>
                 <Text className="text-sm text-[#555]  font-bold">Saturday:</Text>
