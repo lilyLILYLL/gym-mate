@@ -38,3 +38,13 @@ export const galleryImgs = [
     gallery_11,
     gallery_12,
 ];
+
+export const dates = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+];

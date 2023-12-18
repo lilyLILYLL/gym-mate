@@ -36,7 +36,7 @@ export const ClassCard = (props: Props) => {
             <div className="z-10 absolute grayscale-0  w-fit bottom-4 text-start left-6 flex flex-col gap-2">
                 <Text className="text-white text-2xl font-bold">{props.class.name}</Text>
                 <div className="bg-red-600 w-fit text-white p-1 px-2">
-                    <Text>{props.class.time}</Text>
+                    <Text>{props.class.time[0]}</Text>
                 </div>
             </div>
         </div>

@@ -24,7 +24,9 @@ export type BenefitCardModel = {
     description: string;
 };
 export type ClassModel = {
+    classId: number;
     img: StaticImageData[];
     name: string;
-    time: string;
+    time: string[];
+    trainer: string;
 };

@@ -148,33 +148,69 @@ export const WHAT_WE_PROVIDE: BenefitCardModel[] = [
 export const CLASSES: ClassModel[] = [
     {
         img: [cycling, features_gym_bike, features_bike_red],
-        name: "Running",
-        time: "Wednesday: 9:00am-10:00am",
+        name: "Cycling",
+        time: [
+            "Wednesday: 9:00am-10:00am",
+            "Monday: 9:00am-10:00am",
+            "Tuesday: 9:00am-10:00am",
+        ],
+        classId: 1,
+        trainer: "John Weights",
     },
     {
         img: [meditation, features_karate, features_karate_red],
         name: "Meditation",
-        time: "Wednesday: 9:00am-10:00am",
+        time: [
+            "Wednesday: 9:00am-10:00am",
+            "Thurday: 10:00am-12:00pm",
+            "Friday: 9:00am-10:00am",
+        ],
+        classId: 1,
+        trainer: "Junifor Jonas",
     },
     {
         img: [mma, features_boxer, features_boxer_red],
         name: "Martial Arts",
-        time: "Wednesday: 9:00am-10:00am",
+        time: [
+            "Wednesday: 9:00am-10:00am",
+            "Saturday: 9:00am-10:00am",
+            "Sunday: 9:00am-10:00am",
+        ],
+        classId: 1,
+        trainer: "David Vila",
     },
     {
         img: [powerlifting, features_dumbell, features_dumbell_red],
         name: "Power",
-        time: "Wednesday: 9:00am-10:00am",
+        time: [
+            "Tuesday: 9:00am-10:00am",
+            "Monday: 9:00am-10:00am",
+            "Wednesday: 9:00am-10:00am",
+        ],
+        classId: 1,
+        trainer: "Robert Louis",
     },
 
     {
         img: [workout, features_workout, features_workout_red],
         name: "Workout",
-        time: "Wednesday: 9:00am-10:00am",
+        time: [
+            "Tuesday: 9:00am-10:00am",
+            "Monday: 9:00am-10:00am",
+            "Wednesday: 9:00am-10:00am",
+        ],
+        classId: 1,
+        trainer: "Rachel Green",
     },
     {
         img: [yoga, features_yoga, features_yoga_red],
         name: "Yoga",
-        time: "Wednesday: 9:00am-10:00am",
+        time: [
+            "Wednesday: 9:00am-10:00am",
+            "Sunday: 9:00am-10:00am",
+            "Thurdays: 9:00am-10:00am",
+        ],
+        classId: 1,
+        trainer: "Rachel Green",
     },
 ];
