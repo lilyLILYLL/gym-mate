@@ -1,3 +1,4 @@
+import * as Yup from "yup";
 import {
     gallery_1,
     gallery_2,
@@ -12,6 +13,7 @@ import {
     gallery_11,
     gallery_12,
 } from "@assets";
+import { ContactFormmModel } from "./types";
 
 export const SCREENS = [
     "home",
@@ -48,3 +50,9 @@ export const dates = [
     "Saturday",
     "Sunday",
 ];
+export const ContactFormSchema = Yup.object({
+    email: Yup.string().email("Invalid email!").required("Email is required"),
+    full_name: Yup.string().required("Full name is required"),
+    class: Yup.string().required("Class is required"),
+    comment: Yup.string(),
+});

@@ -30,3 +30,10 @@ export type ClassModel = {
     time: string[];
     trainer: string;
 };
+
+export type ContactFormmModel = {
+    full_name: string;
+    email: string;
+    class: string;
+    comment: string;
+};

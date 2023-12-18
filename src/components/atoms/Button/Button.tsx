@@ -22,11 +22,11 @@ export const Button = (props: Props) => {
             break;
         case "primary":
             buttonStyle =
-                "bg-[#555] text-white font-bold text-sm border border-[#555] rounded-sm p-3 px-6 rounded-3xl text-center";
+                "bg-[#555] text-white font-bold text-sm border border-[#555] rounded-[3rem] p-3 px-6 rounded-3xl text-center";
             break;
         case "secondary":
             buttonStyle =
-                "bg-white text-black font-bold text-sm border border-[#555] rounded-sm p-3 px-6 rounded-3xl text-center";
+                "bg-white text-black font-bold text-sm border border-[#555] rounded-[3rem] p-3 px-6 rounded-3xl text-center";
             break;
 
         case "danger":
@@ -44,7 +44,7 @@ export const Button = (props: Props) => {
 
             relative flex flex-row justify-center items-center gap-2  w-fit cursor-pointer hover:bg-pink-200 hover:text-black hover:border-none
              ${buttonStyle} ${props.textClassName} ${props.containerClassName} 
-             ${props.selected ? "bg-pink-200 " : ""} 
+             ${props.selected ? "bg-pink-300 " : ""} 
             
           `}
         >
