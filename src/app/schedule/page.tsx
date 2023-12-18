@@ -25,15 +25,14 @@ const Schedule = (props: Props) => {
             {/* contents */}
             <div className="lg:w-3/4 w-5/6 mx-auto flex flex-col gap-10 ">
                 {/* dates */}
-                <div className="flex flex-box justify-center gap-10  ">
+                <div className="flex flex-box justify-center lg:gap-10  flex-wrap gap-4">
                     {dates.map((item, index) => (
                         <Button
                             title={item}
                             key={index}
                             type="secondary"
-                            containerClassName={`w-[130px] ${
-                                chosenDate === item ? "text-red-500 bg-red-500" : ""
-                            }`}
+                            containerClassName={`w-[130px] `}
+                            selected={item == chosenDate}
                             onClick={() => setChosenDate(item)}
                         />
                     ))}

@@ -10,6 +10,7 @@ export type Props = {
     containerClassName?: string;
     textClassName?: string;
     onClick?: (e?: any) => void;
+    selected?: boolean;
 };
 
 export const Button = (props: Props) => {
@@ -39,9 +40,12 @@ export const Button = (props: Props) => {
     return (
         <div
             onClick={props.onClick}
-            className={` button
-            relative flex flex-row justify-center items-center gap-2  w-fit cursor-pointer hover:bg-red-500 hover:text-white hover:border-none
+            className={` button  
+
+            relative flex flex-row justify-center items-center gap-2  w-fit cursor-pointer hover:bg-pink-200 hover:text-black hover:border-none
              ${buttonStyle} ${props.textClassName} ${props.containerClassName} 
+             ${props.selected ? "bg-pink-200 " : ""} 
+            
           `}
         >
             {props.prefix}
