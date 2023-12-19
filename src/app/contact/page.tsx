@@ -14,8 +14,8 @@ const Contact = (props: Props) => {
     return (
         <div className="h-fit pt-[280px] sm:pt-[500px] pb-36 shadow-lg shadow-slate-300">
             <Header title="Contact Us" />
-            <div className=" flex flex-col lg:flex-row 2xl:w-3/4 w-5/6 mx-auto gap-20  items-center ">
-                <div className="lg:w-1/2 sm:w-3/4 w-11/12 flex flex-col gap-16 my-auto md:text-start text-center">
+            <div className=" flex flex-col-reverse lg:flex-row xl:w-3/4 w-5/6 mx-auto gap-20  items-center ">
+                <div className="lg:w-1/2 sm:w-3/4 w-11/12 flex flex-col gap-16 my-auto lg:text-start text-center">
                     <Text className="font-bold text-[2rem]">
                         We are here for help you! To Shape Your Body.
                     </Text>

@@ -40,11 +40,9 @@ export const Button = (props: Props) => {
     return (
         <div
             onClick={props.onClick}
-            className={` button  
-
-            relative flex flex-row justify-center items-center gap-2  w-fit cursor-pointer 
+            className={` relative flex flex-row justify-center items-center gap-2  w-fit cursor-pointer 
              ${buttonStyle} ${props.textClassName} ${props.containerClassName} 
-             ${props.selected ? " text-white bg-[#c53031]" : ""} 
+             ${props.selected ? " text-white bg-red-500" : ""} 
             
           `}
         >
