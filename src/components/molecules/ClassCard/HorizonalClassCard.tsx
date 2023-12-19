@@ -2,6 +2,7 @@ import React from "react";
 import { ClassModel } from "@shared";
 import { Text } from "@atoms";
 import { Button } from "@atoms";
+import Link from "next/link";
 
 type Props = {
     classInfo: ClassModel;
@@ -25,11 +26,13 @@ export const HorizonalClassCard = ({ classInfo }: Props) => {
             </div>
 
             <div className="md:w-1/4">
-                <Button
-                    title="Join now"
-                    type="primary"
-                    containerClassName="w-1/2 mx-auto "
-                />
+                <Link href={"/contact"}>
+                    <Button
+                        title="Join now"
+                        type="primary"
+                        containerClassName="w-1/2 mx-auto "
+                    />
+                </Link>
             </div>
         </div>
     );

@@ -19,7 +19,7 @@ const Schedule = (props: Props) => {
     }, [chosenDate]);
 
     return (
-        <div className="pt-[500px] pb-[200px] shadow-lg shadow-slate-300 ">
+        <div className="pt-[280px] sm:pt-[500px] pb-[200px] shadow-lg shadow-slate-300 ">
             <Header title="Schedule by Day" />
 
             {/* contents */}

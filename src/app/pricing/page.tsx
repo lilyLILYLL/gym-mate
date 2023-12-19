@@ -9,7 +9,7 @@ type Props = {};
 
 const Pricing = (props: Props) => {
     return (
-        <div className="pt-[380px] ">
+        <div className="pt-[220px] sm:pt-[380px] ">
             <Header title="Pricing" />
 
             {/* PRICING SECTION */}

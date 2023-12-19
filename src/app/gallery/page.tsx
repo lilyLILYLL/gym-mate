@@ -9,7 +9,7 @@ const Gallery = (props: Props) => {
     return (
         <div className="h-fit pt-36 shadow-lg shadow-slate-300">
             <Header title="Gallery" />
-            <div className="w-3/4 mx-auto grid grid-cols-3 grid-flow-row pt-[330px] pb-[150px] gap-4">
+            <div className="w-5/6 sm:w-3/4 mx-auto grid sm:grid-cols-3 grid-cols-2  grid-flow-row  pt-[120px] sm:pt-[330px] pb-[150px] gap-4">
                 {galleryImgs.map((item, index) => (
                     <div key={index}>
                         <Image

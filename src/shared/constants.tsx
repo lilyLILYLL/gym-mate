@@ -20,7 +20,7 @@ export const SCREENS = [
     "about",
     "gallery",
     "schedule",
-    "blog",
+
     "pricing",
     "classes",
     "contact",

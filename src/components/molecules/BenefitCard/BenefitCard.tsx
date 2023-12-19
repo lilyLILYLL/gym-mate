@@ -10,8 +10,8 @@ type Props = {
 export const BenefitCard = ({ benefit }: Props) => {
     return (
         <div
-            className="w-full flex flex-col justify-center items-center text-center lg:gap-4 gap-2 p-8 lg:py-14 bg-white 
-        rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-lg shadow-slate-300 z-20"
+            className="w-full flex flex-col justify-center items-center text-center lg:gap-4 gap-2 px-8 py-4 lg:py-14 bg-white 
+        rounded-tl-3xl rounded-br-3xl cursor-pointer shadow-lg shadow-slate-300 z-20 h-[350px]"
         >
             <div className="lg:w-20 lg:h-20 w-16 h-16">
                 <Image

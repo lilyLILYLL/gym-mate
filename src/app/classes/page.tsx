@@ -6,7 +6,7 @@ type Props = {};
 
 const Classes = (props: Props) => {
     return (
-        <div className="pt-[500px] h-fit">
+        <div className="pt-[290px] sm:pt-[500px] pb-36 h-fit shadow-lg shadow-slate-300">
             <Header title="Classes" />
 
             {/* classes */}

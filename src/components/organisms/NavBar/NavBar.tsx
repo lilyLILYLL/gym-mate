@@ -96,7 +96,7 @@ export const NavBar = (props: Props) => {
                                 <IconPlus />
                             </div>
                         }
-                        type="primary"
+                        type="spin"
                         title="JOIN CLASS NOW"
                         containerClassName="hidden md:inline-flex "
                     />

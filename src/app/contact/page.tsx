@@ -12,10 +12,10 @@ type Props = {};
 
 const Contact = (props: Props) => {
     return (
-        <div className="h-fit pt-[500px] pb-36 shadow-lg shadow-slate-300">
+        <div className="h-fit pt-[280px] sm:pt-[500px] pb-36 shadow-lg shadow-slate-300">
             <Header title="Contact Us" />
-            <div className=" flex flex-col lg:flex-row 2xl:w-3/4 w-5/6 mx-auto gap-20 justify-center items-center ">
-                <div className="lg:w-1/2 sm:w-3/4 w-11/12 flex flex-col gap-10 my-auto">
+            <div className=" flex flex-col lg:flex-row 2xl:w-3/4 w-5/6 mx-auto gap-20  items-center ">
+                <div className="lg:w-1/2 sm:w-3/4 w-11/12 flex flex-col gap-16 my-auto md:text-start text-center">
                     <Text className="font-bold text-[2rem]">
                         We are here for help you! To Shape Your Body.
                     </Text>
@@ -25,7 +25,7 @@ const Contact = (props: Props) => {
                         you to create a personalized fitness and nutrition plan that helps
                         you reach your specific goals.
                     </Text>
-                    <div className="grid grid-cols-2 grid-flow-row grid-rows-2 gap-10 ">
+                    <div className="grid sm:grid-cols-2 grid-cols-1 grid-flow-row  gap-10 w-5/6 mx-auto sm:w-full text-start">
                         <div className="h-auto flex flex-col gap-4">
                             <TextWithUnderLine>New York City, USA</TextWithUnderLine>
                             <Text className="text-[14px] text-[#555]">
@@ -57,7 +57,7 @@ const Contact = (props: Props) => {
                     </div>
                 </div>
                 {/* Conact Form */}
-                <ContactForm conainerClassName="lg:w-1/2 sm:w-3/4 w-11/12 " />
+                <ContactForm conainerClassName="lg:w-1/2 sm:w-3/4 w-full " />
             </div>
         </div>
     );

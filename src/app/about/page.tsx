@@ -7,12 +7,12 @@ type Props = {};
 
 const About = (props: Props) => {
     return (
-        <div className="h-fit pt-36 ">
+        <div className="h-fit pt-[220px] md:pt-36 ">
             <Header title="About Us" />
 
             <BannerTemplate
                 bgImg="https://i.ibb.co/GWzzyvv/background.jpg"
-                containerClassName="lg:pt-[150px] w-5/6 mx-auto"
+                containerClassName="sm:pt-[220px] w-5/6 mx-auto"
             >
                 <BannerInfo
                     title="WHO WE ARE"

@@ -18,15 +18,15 @@ export const Button = (props: Props) => {
     switch (props.type) {
         case "spin":
             buttonStyle =
-                "bg-back text-white font-bold text-sm border border-[#555] rounded-sm p-[0.1rem]";
+                "bg-back text-white font-bold text-sm border border-[#555] rounded-sm p-[0.2rem] pr-2";
             break;
         case "primary":
             buttonStyle =
-                "bg-[#555] text-white font-bold text-sm border border-[#555] rounded-[3rem] p-3 px-6 rounded-3xl text-center";
+                "bg-[#555] text-white font-bold text-sm border border-[#555] rounded-[3rem] p-3 px-6 rounded-3xl text-center hover:bg-[#c53030] hover:text-white  hover:border-none";
             break;
         case "secondary":
             buttonStyle =
-                "bg-white text-black font-bold text-sm border border-[#555] rounded-[3rem] p-3 px-6 rounded-3xl text-center";
+                "bg-white text-black font-bold text-sm border border-[#555] rounded-[3rem] p-3 px-6 rounded-3xl text-cente hover:bg-[#c53030] hover:text-white  hover:border-none";
             break;
 
         case "danger":
@@ -42,9 +42,9 @@ export const Button = (props: Props) => {
             onClick={props.onClick}
             className={` button  
 
-            relative flex flex-row justify-center items-center gap-2  w-fit cursor-pointer hover:bg-pink-200 hover:text-black hover:border-none
+            relative flex flex-row justify-center items-center gap-2  w-fit cursor-pointer 
              ${buttonStyle} ${props.textClassName} ${props.containerClassName} 
-             ${props.selected ? "bg-pink-300 " : ""} 
+             ${props.selected ? "bg-[#c53030] text-white" : ""} 
             
           `}
         >

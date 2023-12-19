@@ -38,7 +38,7 @@ const Home = (props: Props) => {
                     header="  MAKE YOUR BODY"
                     description="FIT & PERFECT"
                     type="primary"
-                    containerClassName="absolute lg:left-[100%] self-center top-[200px]   "
+                    containerClassName="absolute lg:left-[110%] self-center top-[200px]   "
                     button={
                         <AnimationButton
                             title="OUR CLASSES"
@@ -74,7 +74,10 @@ const Home = (props: Props) => {
             </BannerTemplate>
 
             {/* CLASSES SECITON */}
-            <BannerTemplate col>
+            <BannerTemplate
+                col
+                containerClassName="pb-36"
+            >
                 <BannerInfo
                     title="OUR FEATURED CLASSES"
                     header="We Are Offering Best Flexible Classes"
@@ -86,7 +89,7 @@ const Home = (props: Props) => {
             {/* WHY CHOOSE US SECTION */}
             <BannerTemplate
                 bgImg="https://i.ibb.co/ZNn1YJj/choose-bg.jpg"
-                containerClassName="sm:pt-[250px]"
+                containerClassName="sm:pt-[200px]"
             >
                 <AdvertisedBar />
 
@@ -166,25 +169,16 @@ const Home = (props: Props) => {
                 </div>
             </BannerTemplate>
 
-            {/* CONTACT INFO
-            <div className="w-fit flex flex-col justify-center items-center gap-3 absolute right-14 top-[40%]">
+            {/* CONTACT INFO */}
+            <div className="w-fit sm:flex flex-col justify-center items-center gap-4 absolute right-[5%] top-[40%] hidden sm:visible">
                 <Text className="text-white font-bold tracking-wider text-lg text-center mb-6 rotate-90 ">
                     SHARE
                 </Text>
                 <div className="bg-red-700 h-[50px] w-[4px] "></div>
-                <IconBrandFacebook
-                    fill="white"
-                    className="w-8"
-                />
-                <IconBrandTwitter
-                    fill="white"
-                    className="w-8"
-                />
-                <IconBrandLinktree
-                    className="w-8 "
-                    fill="white"
-                />
-            </div> */}
+                <IconBrandFacebook className="w-8 text-white hover:text-red-500  curs" />
+                <IconBrandTwitter className="w-8 text-white hover:text-red-500  curs" />
+                <IconBrandLinktree className="w-8 text-white hover:text-red-500  curs" />
+            </div>
         </div>
     );
 };
