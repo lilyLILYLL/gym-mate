@@ -9,7 +9,7 @@ type Props = {
 
 export const Header = (props: Props) => {
     return (
-        <div className="absolute bg-red-400 h-[200px] sm:h-[360px] top-[2rem] ">
+        <div className="absolute  h-[200px] sm:h-[360px] top-[2rem] ">
             <Image
                 src={Banner}
                 alt="banner"
