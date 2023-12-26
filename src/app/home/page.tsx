@@ -136,7 +136,7 @@ const Home = (props: Props) => {
             </BannerTemplate>
 
             {/* GYMAT GALLERY SECTION */}
-            <BannerTemplate col>
+            {/* <BannerTemplate col>
                 <BannerInfo
                     title="GYMAT GALLERY"
                     header="Our Workplace Gallery"
@@ -145,7 +145,7 @@ const Home = (props: Props) => {
                     containerClassName="justify-center items-center "
                 />
                 <GallerySectionImage />
-            </BannerTemplate>
+            </BannerTemplate> */}
 
             {/* PRICING SECTION */}
             <BannerTemplate

@@ -71,7 +71,7 @@ export const NavBar = (props: Props) => {
                 />
                 {/* USER ICON */}
                 <Link
-                    href={"/"}
+                    href={"/login"}
                     className="w-[2rem] hidden sm:block cursor-pointer  hover:text-red-500 text-white"
                 >
                     <IconUserCircle stroke={2} />

@@ -1,12 +1,15 @@
+import { Text } from "../Text";
 type Props = {
     textarea?: boolean;
-    type?: "text" | "email" | "number";
+    type?: "text" | "email" | "number" | "password";
     placeholder: string;
     textClassName?: string;
     containerClassName?: string;
     errorMessage?: string;
     onChange?: (e?: any) => void;
     value: string;
+    secured?: boolean;
+    label?: string;
 };
 
 export const TextField = ({
@@ -15,10 +18,13 @@ export const TextField = ({
     containerClassName,
     textClassName,
     errorMessage,
+    secured,
+    label,
     ...props
 }: Props) => {
     return (
         <div className={containerClassName}>
+            <Text className="text-white text-lg">{label || ""}</Text>
             {/* TEXTAREA */}
             {textarea ? (
                 <textarea
@@ -29,7 +35,7 @@ export const TextField = ({
                 // TEXT INPUT
                 <input
                     className={`w-full p-4 rounded-lg bg-primary-300 outline-none ${textClassName}`}
-                    type={type}
+                    type={secured ? "password" : type}
                     {...props}
                 />
             )}

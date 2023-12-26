@@ -37,3 +37,8 @@ export type ContactFormmModel = {
     class: string;
     comment: string;
 };
+
+export type UserAuthentication = {
+    email: string;
+    password: string;
+};
