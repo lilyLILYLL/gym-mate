@@ -23,7 +23,7 @@ export const TextField = ({
     ...props
 }: Props) => {
     return (
-        <div className={containerClassName}>
+        <div className={`flex flex-col gap-1 ${containerClassName}`}>
             <Text className="text-white text-lg">{label || ""}</Text>
             {/* TEXTAREA */}
             {textarea ? (

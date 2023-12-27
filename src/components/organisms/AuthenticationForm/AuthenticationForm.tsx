@@ -61,7 +61,7 @@ export const AuthenticationForm = (props: Props) => {
 
                             <span className="text-red-500 font-bold">
                                 <Link
-                                    href={props.type === "signup" ? "/login" : "/signin"}
+                                    href={props.type === "signup" ? "/login" : "/signup"}
                                 >
                                     {props.type === "signup" ? "Sign In" : "Sign Up"}
                                 </Link>
