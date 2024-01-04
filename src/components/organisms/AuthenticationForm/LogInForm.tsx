@@ -22,6 +22,7 @@ export const LoginForm = () => {
 
         if (loginResult.isError) {
             setErrorMessage(loginResult.error.toString());
+            console.log(loginResult.error);
             return;
         }
 
@@ -64,6 +65,10 @@ export const LoginForm = () => {
                             }
                             type="password"
                         />
+
+                        {errorMessage && (
+                            <div className="text-red-500 text-sm">{errorMessage}</div>
+                        )}
 
                         {/* SUBMIT BUTTON */}
                         <Button

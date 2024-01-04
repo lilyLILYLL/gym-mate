@@ -91,7 +91,7 @@ export const NavBar = (props: Props) => {
             </Link>
 
             {/* LINKS */}
-            <div className="xl:flex flex-row w-1/2 mx-auto hidden xl:visible">
+            <div className="xl:flex flex-row w-1/3 mx-auto hidden xl:visible">
                 {SCREENS.map((item, index) => (
                     <LinkText
                         to={item}

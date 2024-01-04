@@ -15,16 +15,7 @@ import {
 } from "@assets";
 import { ContactFormmModel } from "./types";
 
-export const SCREENS = [
-    "home",
-    "about",
-    "gallery",
-    "schedule",
-
-    "pricing",
-    "classes",
-    "contact",
-];
+export const SCREENS = ["home", "about", "gallery", "pricing", "classes", "contact"];
 
 export const galleryImgs = [
     gallery_1,
