@@ -33,3 +33,11 @@
 .class-card:hover > .class-mini-img {
     background-color: white;
 }
+
+.user-icon:hover .user-icon-hover-box {
+    opacity: 1;
+}
+
+.user-icon .user-icon-hover-box {
+    transition: all 0.2s ease-out;
+}

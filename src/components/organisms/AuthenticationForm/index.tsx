@@ -1,1 +1,2 @@
-export * from "./AuthenticationForm";
+export * from "./SignUpForm";
+export * from "./LogInForm";

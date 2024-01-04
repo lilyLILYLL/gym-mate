@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "@molecules";
-import { AuthenticationForm } from "@organisms";
+import { LoginForm } from "@organisms";
 type Props = {};
 
 const LogIn = (props: Props) => {
@@ -10,7 +10,7 @@ const LogIn = (props: Props) => {
             style={{ backgroundImage: "url(https://i.ibb.co/GWzzyvv/background.jpg)" }}
         >
             <Header title="Log In" />
-            <AuthenticationForm type="signin" />
+            <LoginForm />
         </div>
     );
 };

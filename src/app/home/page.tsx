@@ -1,21 +1,16 @@
 import React from "react";
 import {
-    Button,
     Text,
-    TextWithBg,
     AnimationButton,
     GirlRunningImage,
     ChooseUsImage,
-    GallerySectionImage,
     PricingSectionBgImage,
 } from "@atoms";
 import {
-    IconArrowRight,
     IconBrandFacebook,
     IconBrandTwitter,
     IconBrandLinktree,
 } from "@tabler/icons-react";
-import Image from "next/image";
 import { BannerTemplate } from "@templates";
 import { BannerInfo, CourseCard, TrainerCard, AdvertisedBar } from "@molecules";
 import {
@@ -134,18 +129,6 @@ const Home = (props: Props) => {
                     ))}
                 </div>
             </BannerTemplate>
-
-            {/* GYMAT GALLERY SECTION */}
-            {/* <BannerTemplate col>
-                <BannerInfo
-                    title="GYMAT GALLERY"
-                    header="Our Workplace Gallery"
-                    description="Our Workplace Gallery features modern office, team collaboration, and fun culture. Attracts talents and showcases company's work atmosphere"
-                    type="secondary-black"
-                    containerClassName="justify-center items-center "
-                />
-                <GallerySectionImage />
-            </BannerTemplate> */}
 
             {/* PRICING SECTION */}
             <BannerTemplate

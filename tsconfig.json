@@ -25,6 +25,7 @@
             "@organisms": ["./src/components/organisms/index"],
             "@templates": ["./src/components/templates/index"],
             "@shared": ["./src/shared/index"],
+            "@redux": ["./src/redux/index"],
             "@styles/*": ["./src/styles/*"],
             "@pages/*": ["./src/app/*"]
         }

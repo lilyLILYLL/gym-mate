@@ -38,7 +38,17 @@ export type ContactFormmModel = {
     comment: string;
 };
 
-export type UserAuthentication = {
+export type UserAuthenticationType = {
     email: string;
     password: string;
+};
+
+export type IUser = {
+    email: string;
+    username: string;
+    registeredClasses?: string[];
+};
+
+export type RegiesterUserType = UserAuthenticationType & {
+    username: string;
 };
