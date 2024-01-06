@@ -15,7 +15,6 @@ export const SignUpForm = () => {
     const router = useRouter();
 
     React.useEffect(() => {
-        console.log(signUpResult);
         if (signUpResult.isLoading) return;
 
         if (signUpResult.isError) {

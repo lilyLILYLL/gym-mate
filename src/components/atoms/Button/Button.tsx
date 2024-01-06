@@ -3,7 +3,7 @@ import { IconArrowRight } from "@tabler/icons-react";
 
 export type Props = {
     title: string;
-    type: "primary" | "secondary" | "danger" | "spin";
+    type: "primary" | "secondary" | "danger" | "spin" | "number";
     rounded?: "none" | "sm" | "md" | "lg";
     prefix?: JSX.Element;
     postfix?: boolean;
@@ -31,6 +31,9 @@ export const Button = (props: Props) => {
 
         case "danger":
             buttonStyle = "bg-red-600 py-3 px-4 text-white font-bold";
+            break;
+        case "number":
+            buttonStyle = "text-black p-4 h-12 rounded-lg border ";
             break;
         default:
             break;

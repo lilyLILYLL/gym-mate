@@ -16,6 +16,7 @@ import {
 import { ContactFormmModel } from "./types";
 
 export const SCREENS = ["home", "about", "gallery", "pricing", "classes", "contact"];
+export const DEFAULT_PAGE_SIZE = 8;
 
 export const galleryImgs = [
     gallery_1,
