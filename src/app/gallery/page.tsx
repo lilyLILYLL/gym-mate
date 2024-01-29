@@ -13,7 +13,6 @@ const Gallery = (props: Props) => {
     const [getGalleryImages, getGalleryImagesResult] = useLazyGetGalleryImagesQuery();
     const [galleryImgs, setGalleryImgs] = React.useState([]);
     const [page, setPage] = React.useState(1);
-    console.log(galleryImgs);
 
     // Handle Fetching
     const onFetching = (page: number) =>
@@ -22,6 +21,7 @@ const Gallery = (props: Props) => {
     // Fetching for the first time
     React.useEffect(() => {
         onFetching(page);
+        window.scrollTo(0, 0);
     }, [page]);
 
     // Handle Fetching side effects
@@ -29,12 +29,10 @@ const Gallery = (props: Props) => {
         if (getGalleryImagesResult.isFetching) return;
 
         if (getGalleryImagesResult.isError) {
-            console.log(getGalleryImagesResult.error);
             return;
         }
 
         if (getGalleryImagesResult.isSuccess && getGalleryImagesResult.data) {
-            console.log(getGalleryImagesResult.data);
             setGalleryImgs(getGalleryImagesResult.data);
             return;
         }
@@ -48,16 +46,15 @@ const Gallery = (props: Props) => {
             {/* IMAGES GRID LAYOUT */}
             <div className="w-3/4 sm:w-3/4 mx-auto grid lg:grid-cols-3 sm:grid-cols-2 pt-[120px] sm:pt-[330px] pb-[80px] gap-6 ">
                 {/* SKELETON SHOWN WHEN FETCHING*/}
-                {getGalleryImagesResult.isFetching ||
-                    (!galleryImgs.length &&
-                        Array(DEFAULT_PAGE_SIZE)
-                            .fill(null)
-                            .map((item, index) => (
-                                <div
-                                    key={index}
-                                    className="w-auto h-[300px] animate-pulse bg-gray-300 rounded-lg"
-                                ></div>
-                            )))}
+                {getGalleryImagesResult.isFetching &&
+                    Array(DEFAULT_PAGE_SIZE)
+                        .fill(null)
+                        .map((item, index) => (
+                            <div
+                                key={index}
+                                className="w-auto h-[300px] animate-pulse bg-gray-300 rounded-lg"
+                            ></div>
+                        ))}
 
                 {/* IMAGES */}
                 {!getGalleryImagesResult.isFetching &&

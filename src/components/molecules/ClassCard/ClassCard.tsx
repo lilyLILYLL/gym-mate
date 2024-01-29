@@ -72,6 +72,7 @@ export const ClassCard = (props: Props) => {
                         <AnimationButton
                             title="JOIN NOW"
                             backgroundColor="white"
+                            to="/contact"
                         />
                     </div>
                 </div>

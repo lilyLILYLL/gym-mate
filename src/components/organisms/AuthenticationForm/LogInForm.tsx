@@ -22,12 +22,11 @@ export const LoginForm = () => {
 
         if (loginResult.isError) {
             setErrorMessage(loginResult.error.toString());
-            ;
+
             return;
         }
 
         if (loginResult.isSuccess && loginResult.data) {
-           
             dispatch(setToken(loginResult.data));
             router.push("/home");
             return;
@@ -83,6 +82,9 @@ export const LoginForm = () => {
                             <span className="text-red-500 font-bold">
                                 <Link href="/signup"> Sign Up</Link>
                             </span>
+                        </Text>
+                        <Text className="text-white">
+                            ( Test Account: test@gmail.com - 123456 )
                         </Text>
                     </div>
                 )}

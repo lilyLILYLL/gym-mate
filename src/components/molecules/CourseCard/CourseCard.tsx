@@ -8,7 +8,6 @@ type Props = {
 };
 
 export const CourseCard = ({ plan }: Props) => {
-    console.log(plan);
     return (
         <div className="w-[350px] lg:w-full bg-white h-full pb-6 mx-auto relative ">
             <Image

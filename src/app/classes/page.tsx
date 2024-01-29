@@ -10,7 +10,7 @@ const Classes = (props: Props) => {
             <Header title="Classes" />
 
             {/* classes */}
-            <div className="xl:w-5/6 w-11/12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-flow-row  mx-auto gap-6">
+            <div className="xl:w-5/6 w-5/6 grid grid-cols-1 md:grid-cols-3 grid-flow-row  mx-auto gap-6  ">
                 {CLASSES.map((item, index) => (
                     <ClassCard
                         key={index}
