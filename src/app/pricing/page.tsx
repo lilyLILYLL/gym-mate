@@ -8,7 +8,7 @@ import { GymPlanType } from "@shared";
 type Props = {};
 
 const getGymPlans = async () => {
-    const res = await fetch("http://localhost:3005/plans", { cache: "no-cache" });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/plans`);
 
     if (!res.ok) {
         throw new Error("Failed to fetch data");
@@ -19,7 +19,6 @@ const getGymPlans = async () => {
 
 const Pricing = async (props: Props) => {
     const gymPlans = (await getGymPlans()) as GymPlanType[];
-    console.log(gymPlans);
     return (
         <div className="pt-[220px] sm:pt-[380px] ">
             <Header title="Pricing" />
