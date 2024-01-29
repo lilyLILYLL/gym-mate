@@ -65,6 +65,7 @@ const Gallery = (props: Props) => {
                             className="object-cover rounded-lg h-full w-full"
                             width={100}
                             height={200}
+                            key={index}
                         />
                     ))}
             </div>
