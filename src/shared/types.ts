@@ -11,11 +11,11 @@ export type TrainerInfoModel = {
     role: string;
 };
 
-export type CourseModel = {
-    img: StaticImageData;
-    level: "Beginners" | "Intermidiate" | "Advanced";
+export type GymPlanType = {
+    benefits: string[];
     price: number;
-    classes: string[];
+    img: string;
+    type: string;
 };
 
 export type BenefitCardModel = {

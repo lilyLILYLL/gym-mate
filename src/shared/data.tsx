@@ -1,10 +1,4 @@
-import {
-    SampleModel,
-    TrainerInfoModel,
-    BenefitCardModel,
-    CourseModel,
-    ClassModel,
-} from "./types";
+import { SampleModel, TrainerInfoModel, BenefitCardModel, ClassModel } from "./types";
 import {
     Workout,
     Equiments,
@@ -86,7 +80,7 @@ export const trainers: TrainerInfoModel[] = [
     { avatar: Trainer3, full_name: "Rachel Green", role: "Personal Trainer" },
 ];
 
-export const COURSES: CourseModel[] = [
+export const COURSE = [
     {
         level: "Beginners",
         price: 39,

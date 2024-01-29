@@ -22,12 +22,12 @@ export const LoginForm = () => {
 
         if (loginResult.isError) {
             setErrorMessage(loginResult.error.toString());
-            console.log(loginResult.error);
+            ;
             return;
         }
 
         if (loginResult.isSuccess && loginResult.data) {
-            console.log(loginResult.data);
+           
             dispatch(setToken(loginResult.data));
             router.push("/home");
             return;

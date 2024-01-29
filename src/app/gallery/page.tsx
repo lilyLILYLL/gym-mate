@@ -13,7 +13,9 @@ const Gallery = (props: Props) => {
     const [getGalleryImages, getGalleryImagesResult] = useLazyGetGalleryImagesQuery();
     const [galleryImgs, setGalleryImgs] = React.useState([]);
     const [page, setPage] = React.useState(1);
+    console.log(galleryImgs);
 
+    // Handle Fetching
     const onFetching = (page: number) =>
         getGalleryImages({ page, pageSize: DEFAULT_PAGE_SIZE });
 
@@ -44,8 +46,8 @@ const Gallery = (props: Props) => {
             <Header title="Gallery" />
 
             {/* IMAGES GRID LAYOUT */}
-            <div className="w-3/4 sm:w-3/4 mx-auto grid md:grid-cols-3 sm:grid-cols-2  grid-flow-row  pt-[120px] sm:pt-[330px] pb-[80px] gap-6">
-                {/* SKELETON */}
+            <div className="w-3/4 sm:w-3/4 mx-auto grid lg:grid-cols-3 sm:grid-cols-2 pt-[120px] sm:pt-[330px] pb-[80px] gap-6 ">
+                {/* SKELETON SHOWN WHEN FETCHING*/}
                 {getGalleryImagesResult.isFetching ||
                     (!galleryImgs.length &&
                         Array(DEFAULT_PAGE_SIZE)
@@ -57,20 +59,16 @@ const Gallery = (props: Props) => {
                                 ></div>
                             )))}
 
+                {/* IMAGES */}
                 {!getGalleryImagesResult.isFetching &&
                     galleryImgs.map((item, index) => (
-                        <div
-                            key={index}
-                            className="w-auto rounded-lg"
-                        >
-                            <Image
-                                src={item}
-                                alt="gallery_img"
-                                className="object-cover rounded-lg"
-                                width={200}
-                                height={200}
-                            />
-                        </div>
+                        <Image
+                            src={item}
+                            alt="gallery_img"
+                            className="object-cover rounded-lg h-full w-full"
+                            width={100}
+                            height={200}
+                        />
                     ))}
             </div>
 
@@ -85,6 +83,7 @@ const Gallery = (props: Props) => {
                     }}
                 />
 
+                {/* page number */}
                 {Array(3)
                     .fill(0)
                     .map((item, index) => (

@@ -1,4 +1,3 @@
-import * as Yup from "yup";
 import {
     gallery_1,
     gallery_2,
@@ -13,10 +12,9 @@ import {
     gallery_11,
     gallery_12,
 } from "@assets";
-import { ContactFormmModel } from "./types";
 
 export const SCREENS = ["home", "about", "gallery", "pricing", "classes", "contact"];
-export const DEFAULT_PAGE_SIZE = 8;
+export const DEFAULT_PAGE_SIZE = 9;
 
 export const galleryImgs = [
     gallery_1,
@@ -33,18 +31,12 @@ export const galleryImgs = [
     gallery_12,
 ];
 
-export const dates = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-];
-export const ContactFormSchema = Yup.object({
-    email: Yup.string().email("Invalid email!").required("Email is required"),
-    full_name: Yup.string().required("Full name is required"),
-    class: Yup.string().required("Class is required"),
-    comment: Yup.string(),
-});
+// export const dates = [
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday",
+//     "Sunday",
+// ];

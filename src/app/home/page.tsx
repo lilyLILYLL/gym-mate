@@ -142,14 +142,14 @@ const Home = (props: Props) => {
                     type="secondary-black"
                     containerClassName="justify-center items-center "
                 />
-                <div className="flex lg:flex-row flex-col gap-12">
+                {/* <div className="flex lg:flex-row flex-col gap-12">
                     {COURSES.map((item, index) => (
                         <CourseCard
                             key={index}
                             course={item}
                         />
                     ))}
-                </div>
+                </div> */}
             </BannerTemplate>
 
             {/* CONTACT INFO */}

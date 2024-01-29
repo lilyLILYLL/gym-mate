@@ -35,7 +35,6 @@ export const NavBar = (props: Props) => {
 
     // get token
     const [getMe, getMeResult] = useLazyGetMeQuery({});
-    console.log(useAppSelector((state) => state.user));
 
     // Handle Get Current User whenever token changes
     React.useEffect(() => {
@@ -49,7 +48,6 @@ export const NavBar = (props: Props) => {
         if (getMeResult.isFetching) return;
 
         if (getMeResult.isError) {
-            console.log(getMeResult.error);
             alert(getMeResult.error);
         }
 
@@ -66,7 +64,7 @@ export const NavBar = (props: Props) => {
     const handleToggleContactUsSideBar = () => setIsContactUsSideBarOpen((prev) => !prev);
 
     return (
-        <div className=" bg-black py-5 px-6 flex flex-row  justify-between items-center h-fit fixed top-0 z-50">
+        <div className="  py-5 px-6 flex flex-row  justify-between items-center h-fit fixed top-0 z-50 bg-black">
             {/* nav side bar */}
             <SideNavBar
                 isOpen={isSideNavBarOpen}
