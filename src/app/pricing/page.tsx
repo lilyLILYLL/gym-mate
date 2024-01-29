@@ -8,7 +8,7 @@ import { GymPlanType } from "@shared";
 type Props = {};
 
 const getGymPlans = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/plans`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}plans`);
 
     if (!res.ok) {
         throw new Error("Failed to fetch data");
