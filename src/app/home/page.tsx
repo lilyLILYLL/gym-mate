@@ -13,12 +13,7 @@ import {
 } from "@tabler/icons-react";
 import { BannerTemplate } from "@templates";
 import { BannerInfo, CourseCard, TrainerCard, AdvertisedBar } from "@molecules";
-import {
-    COURSES,
-    WHO_WE_ARE_BANNER_SAMPLES,
-    WHY_CHOOSE_US_SAMPLES,
-    trainers,
-} from "@shared";
+import { WHO_WE_ARE_BANNER_SAMPLES, WHY_CHOOSE_US_SAMPLES, trainers } from "@shared";
 import { BenefitList, ClassesList } from "@organisms";
 
 type Props = {};
