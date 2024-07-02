@@ -15,7 +15,7 @@ export const userSlice = createSlice({
         setToken: (state, action: PayloadAction<{ token: string }>) => {
             state.token = action.payload.token;
             // TODO: save the token to the localStorage
-            sessionStorage.setItem("token", action.payload.token);
+            localStorage.setItem("token", action.payload.token);
         },
 
         logout: (state) => {

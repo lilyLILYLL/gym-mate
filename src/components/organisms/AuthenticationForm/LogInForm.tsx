@@ -15,6 +15,7 @@ export const LoginForm = () => {
     const [login, loginResult] = useLogInMutation();
 
     const [errorMessage, setErrorMessage] = React.useState("");
+    console.log(errorMessage);
 
     // Handle Login Request
     React.useEffect(() => {
@@ -83,9 +84,9 @@ export const LoginForm = () => {
                                 <Link href="/signup"> Sign Up</Link>
                             </span>
                         </Text>
-                        <Text className="text-white">
+                        {/* <Text className="text-white">
                             ( Test Account: test@gmail.com - 123456 )
-                        </Text>
+                        </Text> */}
                     </div>
                 )}
             </Formik>
